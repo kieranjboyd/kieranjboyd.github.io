@@ -79,8 +79,12 @@ li {
 	z-index: 3;
 }
 
-.navbar a {
+.navbar-links {
 	float: right;
+}
+
+.navbar a {
+	float: left;
 	display: block;
 	color: #f2f2f2;
 	text-align: center;
@@ -124,7 +128,9 @@ span.material-icons {
 }
 
 @media screen and (max-width: 500px) {
-	.navbar a:not(:first-child) {display: none;}
+	.navbar-links a {
+		display: none;
+	}
 	.navbar a.icon {
 		float: right;
 		display: block;
@@ -137,6 +143,9 @@ span.material-icons {
 		position: absolute;
 		right: 0;
 		top: 0;
+	}
+	.navbar.responsive div {
+		float: none;
 	}
 	.navbar.responsive a {
 		float: none;
