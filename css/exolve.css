@@ -21,3 +21,9 @@
 .xlv-grid {
 	position: relative;
 }
+
+@media screen and (max-width: 500px) {
+	.xlv-clues-box, .xlv-answer, #exolve1 {
+		width: 100% !important;
+	}
+}
