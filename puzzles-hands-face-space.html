@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Hands, Face, Space</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" type="text/css" href="css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="css/exolve.css">
+		<script type="text/javascript" src="js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+	</head>
+	<body>
+		<div class="navbar" id="mynavbar">
+			<a href="index.html" class="active wide-text">KJB</a>
+			<a href="writing.html">Writing</a>
+			<a href="comedy.html">Comedy</a>
+			<a href="puzzles.html">Puzzles</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="content">
+			
+			
+			<div id="exolve"></div>
+			<script>
+			createExolve(`
+			
+			exolve-begin
+				exolve-id: some-unique-identifier
+				exolve-title: Hands, Face, Space
+				exolve-setter: Binder
+				exolve-width: 6
+				exolve-height: 6
+				exolve-grid:
+					C L_O C K S
+					O N_C E|I|P
+					S T E L L A
+					M E L L O_W
+					I|A|L O A_N
+					C R I S E S
+				exolve-across:
+					1 Listen t~{o}~ salty salmon in sections of a canal (6)* LOCKS = homphone(lox) [prepend C]
+					6 ~{U}~nited with others previously of the same kind one can't change (4)* CONNATE = anagram(ONE CAN'T) [remove ANT]
+					7 ~{R}~ing back everyone before an exam - that girl is bravest (6)* GALLANTEST = back(rinG) + ALL + AN + TEST [remove GNAT]
+					9 Good Melanie ad~{h}~eres to owl that's bad natured (6)* MEL + anagram(OWL)
+					10 ~{I}~solate credit from others, working in Memphis tourist street (4)* BE ALONE = embed(ON, BEALE) [remove BEE]
+					11 Extremely s~{n}~ide knight pivots and stands up ... (6)* RISES = reverse(outside(SnidE) + SIR)
+				exolve-down:
+					1 ... involving o~{d}~ours of gastric rear - I'm so taken aback (6)* OSMIC = reverse(last(gastriC) + I'M + SO) [prepend C]
+					2 ~{S}~pecial low rent provides cover for keeping eyes down (6)* PILLOWCASE = anagram(SPECIAL LOW) [remove WASP]
+					3 In B~{i}~lbao, it's them using Cockney greetings? (6)* ELLOS = dd(Spanish "them", "Cockney greetings") [prepend C]
+					4 Juliet's kiss be~{g}~inning with one half-lost follower (4)* first(Kiss) + I + half(LOst)
+					5 Produces minions be~{h}~ind small offspring (6)* S + PAWNS
+					8 Water rent ra~{t}~e drop (4)* anagram(RATE)
+				exolve-preamble:
+					<p>2020 has been a tough year for all, so here's a little variety cryptic that features some techniques for staying safe. In the UK, everyone is currently encouraged to observe three handy rules, each of which applies to 4 clues in this crossword:</p>
+					<ol>
+					<li><b>Hands</b> - Apply hand sanitiser to each clue: first solve the clue (ignoring an extraneous word), then remove the letters of a nasty hidden bug, then scrub the remaining letters together to form the grid entry, as defined by the extra word.</li>
+					<li><b>Face</b> - Each clue is entered into the grid wearing a simple, fitted face mask (without ventilators, mind you), forming a new word.</li>
+					<li><b>Space</b> - The two-word definition part of each clue is practicing social distancing by standing on either side of the cryptic part of the clue.</li>
+					</ol>
+					<p>For each clue, if it uses rule #N, circle the Nth letter of the Nth word of that clue. In clue order, the circled letters show what we can all use to make sense of 2020.</p>
+			exolve-question: What can we all use to make sense of 2020? (50)* OUR HINDSIGHT
+				exolve-relabel:
+					confirm-check-all:
+					confirm-clear-all:
+					confirm-reveal-all:
+			exolve-end
+			`);
+			</script>
+		</div>
+	</body>
+</html>

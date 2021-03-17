@@ -1,0 +1,44 @@
+{
+  "Puzzles": {
+    "1": {
+      "Title": "Kieran",
+      "Text": "Blah",
+      "Answer": "Answer",
+      "Hints": {
+        "Bronze": "Here's a hint",
+        "Silver": "Here's a hint",
+        "Gold": "Here's a hint"
+      }
+    },
+    "2": {
+      "Title": "Daisy",
+      "Text": "Blah",
+      "Answer": "Answer",
+      "Hints": {
+        "Bronze": "Here's a hint",
+        "Silver": "Here's a hint",
+        "Gold": "Here's a hint"
+      }
+    },
+    "3": {
+      "Title": "Lewis",
+      "Text": "Blah",
+      "Answer": "Answer",
+      "Hints": {
+        "Bronze": "Here's a hint",
+        "Silver": "Here's a hint",
+        "Gold": "Here's a hint"
+      }
+    },
+    "4": {
+      "Title": "Lauren",
+      "Text": "Blah",
+      "Answer": "Answer",
+      "Hints": {
+        "Bronze": "Here's a hint",
+        "Silver": "Here's a hint",
+        "Gold": "Here's a hint"
+      }
+    }
+  }
+}

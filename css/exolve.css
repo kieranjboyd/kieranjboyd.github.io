@@ -1,0 +1,23 @@
+.xlv-frame,
+.xlv-button,
+.xlv-wide-box,
+.xlv-status {
+	font-family: Bitter !important;
+}
+
+.xlv-controls-row {
+	text-align: center;
+}
+
+.xlv-answer {
+	font-size: 14px;
+	background-image: repeating-linear-gradient(to bottom, white, white 17px, black 18px);
+}
+
+.crossed-out {
+	text-decoration: line-through;
+}
+
+.xlv-grid {
+	position: relative;
+}
