@@ -23,7 +23,10 @@
 }
 
 @media screen and (max-width: 500px) {
-	.xlv-clues-box, .xlv-answer, #exolve1 {
+	.xlv-clues-box, .xlv-answer, #exolve1, .xlv-grid-and-clues-flex, .xlv-grid-panel {
 		width: 100% !important;
+	}
+	.xlv-grid-parent-centerer {
+		overflow-x: scroll;
 	}
 }
