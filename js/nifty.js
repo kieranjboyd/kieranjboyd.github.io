@@ -67,6 +67,15 @@ function generateCurrentAnswersState() {
 	return s;
 }
 
+function getStateFromCookies(input) {
+	var answers = getCookie("answers");
+	if (answers != "") {
+		return answers;
+	} else {
+		return input;
+	}
+}
+
 function setCookie(cname, cvalue, exdays) {
 	var d = new Date();
 	d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -116,6 +125,7 @@ var tableData = [["COME", "DANCE", "AROUND", "MY", "PUZZLE", "SET", "EYE", "AMPL
 
 document.getElementById("main-table").appendChild(createTable(tableData));
 var mystate = generateState();
+mystate = getStateFromCookies(mystate);
 var myJSON = JSON.parse(generateState());
 var answerTable = createAnswerTable(myJSON);
 document.getElementById("answer-table").appendChild(answerTable);
