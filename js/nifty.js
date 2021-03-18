@@ -57,7 +57,7 @@ function generateState() {
 
 function generateCurrentAnswersState() {
 	var s = '[';
-	for(var i = 0; i < 37; i++) {
+	for(var i = 0; i < 36; i++) {
 		var myid = "answer-" + (i+1);
 		var element = document.getElementById(myid);
 		s += '["' + document.getElementById("answer-" + (i+1)).value + '",0]';
