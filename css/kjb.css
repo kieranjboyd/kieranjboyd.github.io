@@ -56,18 +56,39 @@ li {
 	padding: 4px;
 }
 
+li > ul {
+	padding-top: 4px;
+}
+
+.body {
+	overflow: hidden;
+}
+
+.main {
+	top: 51px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	position: absolute;
+	overflow: auto;
+	scroll-behavior: smooth;
+}
+
 .content {
 	max-width: 1000px;
 	width: 80%;
-	height: 100%;
 	margin: 0 auto;
-	margin-top: 50px;
 	padding: 20px;
 }
 
 .header {
 	text-align: center;
-	padding: 20px;
+	padding-bottom: 20px;
+}
+
+.footer {
+	font-size: small;
+	text-align: center
 }
 
 .navbar {
@@ -177,4 +198,16 @@ span.material-icons {
 	.flex-item-right, .flex-item-left {
 		flex: 100%;
 	}
+}
+
+.quote {
+	margin: 0;
+	background: #eee;
+	padding: 1em;
+	border-radius: 1em;
+}
+
+.quote figcaption,
+.quote blockquote {
+	margin: 1em;
 }

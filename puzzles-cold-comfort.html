@@ -19,61 +19,66 @@
 				<span class="material-icons">menu</span>
 			</a>
 		</div>
-		<div class="content">
-			<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
-			<script src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
-			<style>
-				.xlv-frame, .xlv-button, .xlv-wide-box, .xlv-status {font-family: Bitter !important;}
-				.xlv-controls-row {text-align: center;}
-				.xlv-answer {font-size: 14px; background-image:
-					repeating-linear-gradient(to bottom, white, white 17px, black 18px);}
-				.crossed-out {text-decoration: line-through;}
-			</style>
-			<div id="exolve"></div>
-			<script>
-			createExolve(`
-			
-			exolve-begin
-					exolve-id: binder-cold-comfort
-					exolve-title: Cold Comfort
-					exolve-setter: Binder
-					exolve-width: 6
-					exolve-height: 6
-					exolve-grid:
-						W E D_G E_S
-						I|T|P E R_U
-						N A A N S|N
-						D|S_C R O D
-						O G_E E+R|R
-						W E S L E Y
-					exolve-across:
-						1 Lumps of ~{very}~ weak extremities (6) W + EDGES
-						5 ~{Active}~ state of pure sickness (4) anagram(PURE)
-						6 Nibbles at a nutritious snack for starters - Indian ~{with}~ flatbreads (5) initials(Nibbles At A Nutritious Snack)
-						8 Atlantic haddock with hint of swine ~{flu}~ gets caught by fishing pole (5) first(Swine) + C + ROD
-						9 Rough eyes, oddly ~{shot}~ out of S-shaped bend (4) evens(rOuGhEyEs)
-						10 Snipes the last allergy we ~{five}~ almost slew before (6) WE + truncate(SLEw) + last(allergY)
-					exolve-down:
-						1 Howl, essentially! (6) inside(hOWl), &lit [prepend WIND]
-						2 Sat around after live trials normally full of bugs (4) BE + reverse(SAT) [remove head]
-						3 Sickly-looking spinach, for example (5) Double definition [anagram]
-						4 Often dirty like chapped lips (6) odds(DiRtY) [prepend SUN]
-						5 Open areas and venues to rejuvenate with extremely comfortable contents (5) insert(outside(ComfortablE), SPAS) [remove head]
-						7 Mumbled some lines, got out of bed (4) homophone(rows) [anagram]
-					exolve-preamble:
-						<p>Having spent the (Victorian) Labour Day long weekend in bed with a terrible cold, my illness has spilled into my crossword making.<\p>
-						<p>Half the clues have come down with something: they're either off-colour, under the weather, or have a splitting head(ache), in equal proportions. Unfortunately this means their answers don't match their listed enumeration.<\p>
-						<p>To get the point across, each of the other half has been infected by a nasty bug in the form of an extra word. Together these words, in order, produce a final cryptic clue, whose surface describes how I'll be spending the long weekend next year (hopefully), and whose answer describes my experience this year.<\p>
-					exolve-question: What is the extra clue? (50)* Very active with flu shot (5)
-					exolve-question: How is my experience this year described? (50)* AWFUL
-					exolve-relabel:
-					confirm-check-all:
-					confirm-clear-all:
-					confirm-reveal-all:
-				exolve-end
-			
-			`);
-			</script>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+				<script src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+				<style>
+					.xlv-frame, .xlv-button, .xlv-wide-box, .xlv-status {font-family: Bitter !important;}
+					.xlv-controls-row {text-align: center;}
+					.xlv-answer {font-size: 14px; background-image:
+						repeating-linear-gradient(to bottom, white, white 17px, black 18px);}
+					.crossed-out {text-decoration: line-through;}
+				</style>
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-cold-comfort
+							exolve-title: Cold Comfort
+							exolve-setter: Binder
+							exolve-width: 6
+							exolve-height: 6
+							exolve-grid:
+								W E D_G E_S
+								I|T|P E R_U
+								N A A N S|N
+								D|S_C R O D
+								O G_E E+R|R
+								W E S L E Y
+							exolve-across:
+								1 Lumps of ~{very}~ weak extremities (6) W + EDGES
+								5 ~{Active}~ state of pure sickness (4) anagram(PURE)
+								6 Nibbles at a nutritious snack for starters - Indian ~{with}~ flatbreads (5) initials(Nibbles At A Nutritious Snack)
+								8 Atlantic haddock with hint of swine ~{flu}~ gets caught by fishing pole (5) first(Swine) + C + ROD
+								9 Rough eyes, oddly ~{shot}~ out of S-shaped bend (4) evens(rOuGhEyEs)
+								10 Snipes the last allergy we ~{five}~ almost slew before (6) WE + truncate(SLEw) + last(allergY)
+							exolve-down:
+								1 Howl, essentially! (6) inside(hOWl), &lit [prepend WIND]
+								2 Sat around after live trials normally full of bugs (4) BE + reverse(SAT) [remove head]
+								3 Sickly-looking spinach, for example (5) Double definition [anagram]
+								4 Often dirty like chapped lips (6) odds(DiRtY) [prepend SUN]
+								5 Open areas and venues to rejuvenate with extremely comfortable contents (5) insert(outside(ComfortablE), SPAS) [remove head]
+								7 Mumbled some lines, got out of bed (4) homophone(rows) [anagram]
+							exolve-preamble:
+								<p>Having spent the (Victorian) Labour Day long weekend in bed with a terrible cold, my illness has spilled into my crossword making.<\p>
+								<p>Half the clues have come down with something: they're either off-colour, under the weather, or have a splitting head(ache), in equal proportions. Unfortunately this means their answers don't match their listed enumeration.<\p>
+								<p>To get the point across, each of the other half has been infected by a nasty bug in the form of an extra word. Together these words, in order, produce a final cryptic clue, whose surface describes how I'll be spending the long weekend next year (hopefully), and whose answer describes my experience this year.<\p>
+							exolve-question: What is the extra clue? (50)* Very active with flu shot (5)
+							exolve-question: How is my experience this year described? (50)* AWFUL
+							exolve-relabel:
+							confirm-check-all:
+							confirm-clear-all:
+							confirm-reveal-all:
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Top</a> - KJB, 2021-03-18</p>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
