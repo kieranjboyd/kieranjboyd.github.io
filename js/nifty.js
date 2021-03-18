@@ -126,6 +126,6 @@ var tableData = [["COME", "DANCE", "AROUND", "MY", "PUZZLE", "SET", "EYE", "AMPL
 document.getElementById("main-table").appendChild(createTable(tableData));
 var mystate = generateState();
 mystate = getStateFromCookies(mystate);
-var myJSON = JSON.parse(generateState());
+var myJSON = JSON.parse(mystate);
 var answerTable = createAnswerTable(myJSON);
 document.getElementById("answer-table").appendChild(answerTable);
