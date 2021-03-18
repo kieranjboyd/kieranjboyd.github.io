@@ -61,7 +61,7 @@ function generateCurrentAnswersState() {
 		var myid = "answer-" + (i+1);
 		var element = document.getElementById(myid);
 		s += '["' + document.getElementById("answer-" + (i+1)).value + '",0]';
-		if(i < 36) { s += "," }
+		if(i < 36) { s += ","; }
 	}
 	s += ']'
 	return s;
