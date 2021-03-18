@@ -81,7 +81,6 @@ li > ul {
 	padding: 20px;	
     min-height: calc(100% - 51px);
     position:relative;
-	padding-bottom: 50px;
 }
 
 .header {
