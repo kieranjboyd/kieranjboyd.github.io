@@ -49,7 +49,7 @@ function generateState() {
 	var s = '[';
 	for(var r = 0; r < 37; r++) {
 		s += '["' + 'test' + '",0]';
-		if(r < 36) { s += "," }
+		if(r < 37) { s += "," }
 	}
 	s += ']'
 	return s;
@@ -57,7 +57,7 @@ function generateState() {
 
 function generateCurrentAnswersState() {
 	var s = '[';
-	for(var i = 0; i < 36; i++) {
+	for(var i = 0; i < 37; i++) {
 		var myid = "answer-" + (i+1);
 		var element = document.getElementById(myid);
 		s += '["' + document.getElementById("answer-" + (i+1)).value + '",0]';
