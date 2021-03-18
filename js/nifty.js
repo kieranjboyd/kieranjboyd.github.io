@@ -30,7 +30,7 @@ function createAnswerTable(answerData) {
 		for(var c = 0; c < 6; c++) {
 			var cell = document.createElement('td');
 			var input = document.createElement("input");
-			input.name = "answer-" + (i+1)
+			input.id = "answer-" + (i+1)
 			input.type = "text";
 			input.value = answerData[i][0];
 			cell.appendChild(input);
@@ -58,8 +58,10 @@ function generateState() {
 function generateCurrentAnswersState() {
 	var s = '[';
 	for(var i = 0; i < 37; i++) {
-		s += '["' + document.getElementById("answer-" + (r+1)).value + '",0]';
-		if(r < 36) { s += "," }
+		var myid = "answer-" + (i+1);
+		var element = document.getElementById(myid);
+		s += '["' + document.getElementById("answer-" + (i+1)).value + '",0]';
+		if(i < 36) { s += "," }
 	}
 	s += ']'
 	return s;
@@ -69,6 +71,7 @@ function setCookie(cname, cvalue, exdays) {
 	var d = new Date();
 	d.setTime(d.getTime() + (exdays*24*60*60*1000));
 	var expires = "expires="+ d.toUTCString();
+	alert("Setting '" + cname + "' to the following: '" + cvalue + "'");
 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 

@@ -3,7 +3,7 @@
     display: block;
 }
 
-#main-table td, #answer-table td {
+.nice-grid td {
     min-width: 162px;
     background: lightgray;
     text-align: center;
@@ -17,7 +17,7 @@
     min-width: 162px;
 }
 
-#answer-table input {
+.nice-grid input {
     position: absolute;
     left: 0;
     right: 0;
