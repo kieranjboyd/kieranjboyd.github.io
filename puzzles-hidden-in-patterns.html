@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Hidden in Patterns</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="css/exolve.css">
+		<script type="text/javascript" src="js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="puzzles.html">Puzzles</a>
+				<a href="comedy.html">Comedy</a>
+				<a href="writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-hidden-in-patterns
+							exolve-title: Hidden in Patterns
+							exolve-setter: Binder
+							exolve-width: 12
+							exolve-height: 12
+							exolve-grid:
+								T U R_B_A N|P A_R C E_L
+								E|N|E L_D E R B_E R R_Y
+								A D D T_O|O|O|O_N E S|M
+								R E D O_N N E D+O|D|A|P
+								U|S|O+A|I|A|M+Q_U O_T H
+								P_E O_N S+T A N_N O_Y S_
+								T R O_D D_E_N|S C O_R E
+								I V O R Y+S|C|T|E+O|I|X
+								N|E|R|O|A_C H R O_M A T
+								N|D_A G O+O|O|O B_E S E
+								I N_T E R_U R B A_N+I|N
+								E V E N E R|S E X I S T
+							exolve-across:
+								1 Ordered a burnt ~{wrap}~ (6) anagram(A BURNT)
+								5 Around the French bull is a ~{tract}~ (6) reverse(LE CRAP)
+								9 ~{Red or black fruit}~ is extremely essential, despite rhubarb elixir remedy (10) outsides(E..L D..E R..B E..R R..Y)
+								10 Eavesdropped informercial also overheard to ~{extend or obviate}~ (3,2) homophone(ad too)
+								11 Neo was made to order small ~{tokens}~ (4) anagram(NEO) + S
+								13 End drone goes out in error and is ~{slipped into once again}~ (8) anagram(END DRONE)
+								15 Pair of quails sent back to admonish at last, to get ~{what the raven did?}~ (5) firsts(QUails) + reverse(TO) + last(admonisH)
+								16 Leading Pharaoh encroaches Omani nomads, shoehorning ~{muchachos}~ (5) firsts(P.. E.. O.. N.. S..)
+								17 Bark from an oak crash, so it's said, produces ~{audio systems}~ (7) homophone(tan noise)
+								19 Close to abolishment, stick house got ~{crushed into earth}~ (7) last(abolishmenT) + ROD + DEN
+								20 ~{Movie's audio}~ is locked into a LaserDisc or EP (5) hidden answer
+								22 Gold goes into a type of greenery to yield ~{creamy-white}~ (5) insert(OR, IVY)
+								26 Ham actor breaks out to ~{lens with no effect to radiance}~ (8) anagram(HAM ACTOR)
+								27 Using silver in a coif constitutes an ~{offensive taboo}~ (4) insert(AG, DO)
+								28 Zero bees frolicking - ~{too thick}~ (5) O + anagram(BEES)
+								29 Curiously barren unit ~{between cities}~ (10) anagram(BARREN UNIT)
+								30 ~{Flatter}~ some twice-venerable characters (6) hidden answer
+								31 A ~{gender bigot}~ exists, sadly (6) anagram(EXISTS)
+							exolve-down:
+								1 ~{Obliterate}~ and ~{start crying}~ (4,2) double definition
+								2 ~{Inordinate}~ and lacking facilities when the king leaves (10) UNDERSERVED - R
+								3 A top Cambridge tutor is a ~{guy that's too sexy}~ (6) A + DON + IS
+								4 ~{New baby}~ observed to eat grossly after it got gas (7) NEON + anagram(EAT)
+								5 ~{Preamble}~ in poem capturing boxer's end (5) insert(end(boxeR), POEM)
+								6 ~{Forgo entitled job}~ about boffin's final unit of measure (8) RE + last(boffiN) + OUNCE
+								7 Church of England soiree has the right ~{beliefs close to heart}~ (5) insert(R, CE + DO)
+								8 Dissolving drug helps my erupting ~{discharges}~ (6) anagram(HELPS MY) - E
+								9 ~{Taro plants}~ filled doe's interior (4) hidden answer
+								12 Capricious sissy tiara results in ~{hypersexuality}~ (10) anagram(SISSY TIARA)
+								14 ~{Manly kind of steroid}~ for danger with no shot (8) anagram(DANGER + NO)
+								18 ~{Boat parts}~ obtained in no crash chaos (7) anagram(NO CRASH)
+								19 ~{Beer down under}~ is cheaper, lacking finish (6) truncated(TINNIEr)
+								20 ~{To glitter noisily}~, set orb revolving (6) anagram(SET ORB)
+								21 ~{Scale}~ old teepee (6) EX + TENT
+								23 ~{Approach}~ concealed by interrogator at employment (5) hidden
+								24 Hostile Charlie goes in to ~{explore fully}~ (5) insert(C, SOUR)
+								25 Conclusive signs to affirm future vision! (4) &lit, ends(..O, ..M, ..E, ..N)
+							exolve-preamble:
+								<p>Use the clues to fill the grid, which will reveal a particular pattern, or shape.</p>
+								<p>For the answers that intersect this shape, look for all instances of that same shape in the corresponding clues. Then look at what comes directly after each instance, combined. This will give you some new clues, which can be used to solve the spaces in the grid again.</p>
+								<p>Then, consider the unchanged answers that didn't intersect with the shape. Find that shape in the corresponding clues, and take the positions for each clue. Pair these clues together, and use these as co-ordinates of letters in the new grid.</p>
+								<p>Then you will find a two word solution that is the best time to solve this puzzle.</p>
+							exolve-question: Once you've solved the first step, click Reveal All for a link to the second grid here (50)* puzzles-hidden-in-patterns-oooo.html
+							exolve-relabel:
+								confirm-check-all:
+								confirm-clear-all:
+								confirm-reveal-all:
+						exolve-end			
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-03-18</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
