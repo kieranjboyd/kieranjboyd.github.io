@@ -49,7 +49,7 @@ function generateState() {
 	var s = '[';
 	for(var r = 0; r < 37; r++) {
 		s += '["' + 'test' + '",0]';
-		if(r < 37) { s += "," }
+		if(r < 36) { s += ","; }
 	}
 	s += ']'
 	return s;
