@@ -28,6 +28,10 @@
 	margin-bottom: -4px;
 }
 
+#exolve1 {
+	margin-bottom: 50px
+}
+
 @media screen and (max-width: 500px) {
 	.xlv-clues-box, .xlv-answer, #exolve1, .xlv-grid-and-clues-flex, .xlv-grid-panel {
 		width: 100% !important;
