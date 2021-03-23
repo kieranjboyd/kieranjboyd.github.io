@@ -129,3 +129,4 @@ mystate = getStateFromCookies(mystate);
 var myJSON = JSON.parse(mystate);
 var answerTable = createAnswerTable(myJSON);
 document.getElementById("answer-table").appendChild(answerTable);
+document.getElementById("answer-37").value = myJSON[36][0];
