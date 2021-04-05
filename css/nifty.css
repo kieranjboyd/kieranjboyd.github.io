@@ -1,6 +1,10 @@
-#main-table {
-	overflow-x: scroll;
+#grid-table, #answer-table {
+	overflow-x: auto;
     display: block;
+}
+
+#grid-div, #answer-div, #final-div {
+	margin-bottom: 20px;
 }
 
 .nice-grid td {
@@ -31,4 +35,28 @@
     font-size: x-large;
     font-family: monospace;
     text-transform: uppercase;
+}
+
+#hints {
+	display: none;
+}
+
+#hintsrow {
+	position: sticky;
+  top: 0;
+}
+
+#hintsrow td {
+	font-size: large;
+
+}
+
+.hint-selected {
+	background: silver !important;
+}
+
+button.hint-button {
+	width: 80%;
+	font-size: large;
+    font-family: monospace;
 }

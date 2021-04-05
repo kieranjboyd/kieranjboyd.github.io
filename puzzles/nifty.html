@@ -4,18 +4,18 @@
 		<title>KJB - Puzzles - Nifty Puzzle Hunt</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
-		<script type="text/javascript" src="./js/navbar.js"></script>
+		<script type="text/javascript" src="../js/navbar.js"></script>
 		<link rel="stylesheet" type="text/css" href="../css/nifty.css">
 	</head>
 	<body>
 		<div class="navbar" id="navbar">
-			<a href="index.html" class="active wide-text">KJB</a>
+			<a href="../index.html" class="active wide-text">KJB</a>
 			<div class="navbar-links">			
 				<a href="../puzzles.html">Puzzles</a>
 				<a href="../comedy.html">Comedy</a>
 				<a href="../writing.html">Writing</a>
 			</div>
-			<a href="javascript:void(0)
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<span class="material-icons">menu</span>
 			</a>
 		</div>
@@ -26,10 +26,10 @@
 					<h1>Nifty Puzzle Hunt</h1>
 				</div>
 				<div>
-					<p>Welcome to my first puzzle hunt. Getting it to work in a website is a realy test, please let me know if there are any issues.</p>
-					<div class="nice-grid" id="main-table"></div>
-					<div class="nice-grid" id="answer-table"></div>
-					<div class="nice-grid" id="final-answer">
+					<p>Welcome to my first puzzle hunt. Getting it to work in a website is a real test, please let me know if there are any issues.</p>
+					<div class="nice-grid" id="grid-div"></div>
+					<div class="nice-grid" id="answer-div"></div>
+					<div class="nice-grid" id="final-div" style="margin-bottom: 20px;">
 						<table>
 							<tbody>
 								<tr>
@@ -41,7 +41,6 @@
 						</table>
 					</div>
 					<div style="margin-bottom: 50px;">
-						<p>Way more text</p>
 						<button onclick="saveAnswers()">Save</button>
 						<button onclick="checkAnswers()">Check</button>
 					</div>
@@ -51,5 +50,5 @@
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript" src="js/nifty.js" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/nifty.js" charset="utf-8"></script>
 </html>
