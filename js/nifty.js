@@ -1,7 +1,7 @@
 function createTable(tableData) {
 	var table = document.createElement('table');
 	table.id = "grid-table";
-	var tableBody = document.createElement('tbody');
+	var tbody = document.createElement('tbody');
 
 	tableData.forEach(function(rowData) {
 		var row = document.createElement('tr');
@@ -12,41 +12,52 @@ function createTable(tableData) {
 			row.appendChild(cell);
 		});
 
-		tableBody.appendChild(row);
+		tbody.appendChild(row);
 	});
 
-	table.appendChild(tableBody);
+	table.appendChild(tbody);
 	return table;
 }
 
-function showHints() {
-	var oldRow = document.getElementById("hintsrow");
-	if (typeof(oldRow) != 'undefined' && oldRow != null) {
-		oldRow.parentNode.removeChild(oldRow);
-	}
-	var cellID = parseInt(this.id.split('-')[1]) - 1;
+function cancelSelectionEvent() {
+	this.blur;
+	event.preventDefault();
+	event.stopImmediatePropagation();
+	event.stopPropagation();
+	return false;
+}
+
+function showHintsEvent() {
+	showHints(parseInt(this.id.split('-')[1]) - 1);
+}
+
+function showHints(ID) {
+	clearHints();
 	var row = document.createElement("tr");
-	row.id = "hintsrow";
+	row.id = "hints-row";
+	row.tabIndex = 0;
 	var tbody = document.getElementById("answer-table").children[0];
-	tbody.insertBefore(row, tbody.children[Math.floor(cellID / 6)].nextSibling);
-	refreshHints(cellID);
+	tbody.insertBefore(row, tbody.children[Math.floor(ID / 6)].nextSibling);
+	refreshHints(ID);
 }
 
 function refreshHints(cellID) {
-	var row = document.getElementById("hintsrow");
+	var row = document.getElementById("hints-row");
 	row.innerHTML = '';
 	var cell;
 	var currentScore = myJSON[cellID][1];
 	for (var i = 0; i < 3; i++) {
 		cell = row.insertCell(i);
 		cell.colSpan = 2;
+		cell.tabIndex = 0;
 		cell.style.backgroundColor = hintButtonDetails[i][1];
+		cell.addEventListener('mousedown', cancelSelectionEvent);
 		if ((currentScore & Math.pow(2, i)) == 0) {
 			var button = document.createElement("BUTTON");
 			button.classList.add("hint-button", hintButtonDetails[i][0]);
 			button.innerHTML = hintButtonDetails[i][0];
 			button.id = "hint-" + cellID + "-" + i;
-			button.addEventListener("click", revealHint);
+			button.addEventListener("click", revealHintEvent);
 			cell.appendChild(button);
 		} else {
 			cell.innerHTML = rot13(hints[cellID][i]);
@@ -54,7 +65,32 @@ function refreshHints(cellID) {
 	}
 }
 
-function revealHint() {
+function leaveHintsEvent() {
+	if (event.relatedTarget != null) {
+		if (document.getElementById("answer-div").contains(event.relatedTarget)) {
+			if (document.getElementById("hints-row").contains(event.relatedTarget)) {
+				event.target.focus();
+				event.preventDefault();
+				event.stopImmediatePropagation();
+				event.stopPropagation();
+				return false
+			}
+		} else {
+			clearHints();
+		}
+	} else {
+		clearHints();
+	}
+}
+
+function clearHints() {
+	var oldRow = document.getElementById("hints-row");
+	if (typeof(oldRow) != 'undefined' && oldRow != null) {
+		oldRow.parentNode.removeChild(oldRow);
+	}
+}
+
+function revealHintEvent() {
 	var cellID = parseInt(this.id.split("-")[1]);
 	var hintID = parseInt(this.id.split("-")[2]);
 	myJSON[cellID][1] += Math.pow(2, hintID);
@@ -66,10 +102,13 @@ function createAnswerTable(answerData) {
 	var table = document.createElement('table');
 	table.id = "answer-table";
 	table.style.margin = "0 auto";
-	var tableBody = document.createElement('tbody');
+	//table.tabIndex = "0";
+	//table.addEventListener('click', cancelSelectionEvent);
+	var tbody = document.createElement('tbody');
+	//tbody.tabIndex = "0";
+	//tbody.addEventListener('click', cancelSelectionEvent);
 	
 	var i = 0;
-	
 	for (var r = 0; r < 6; r++) {
 		var row = document.createElement('tr');
 
@@ -79,18 +118,18 @@ function createAnswerTable(answerData) {
 			input.id = "answer-" + (i+1)
 			input.type = "text";
 			input.value = answerData[i][0];
-			input.addEventListener("focus", showHints);
-			//input.addEventListener("focusout", leaveHints);
+			input.addEventListener("focus", showHintsEvent);
+			input.addEventListener("focusout", leaveHintsEvent);
 			input.addEventListener("input", checkAnswerEvent);
 			cell.appendChild(input);
 			row.appendChild(cell);
 			i++;
 		};
 
-		tableBody.appendChild(row);
+		tbody.appendChild(row);
 	};
 
-	table.appendChild(tableBody);
+	table.appendChild(tbody);
 	return table;
 }
 
@@ -200,7 +239,7 @@ var tableData = [["COME", "DANCE", "AROUND", "MY", "PUZZLE", "SET", "EYE", "AMPL
 var hints = [["ZRGN FUNCR JBEQF","GUR ZNTVP FDHNER EBBG BS 36 VF 6","GENPR FDHNER/GEVNATYR/PVEPYR ERSRERAPRF"], ["ARVTUOBHEVAT FHZZRQ VAQVPRF","VAIVFVOYR OBEQREF ZHAQV PNGREVAT","FHZ AHZOREF SEBZ ARKG CHMMYR GB VAQRK"], ["ERSRERAPR VFYNAQ CHMMYR","ERSRE 2 CHMMYR JVGU FJNCCRQ PBBEQVANGRF","NYCUN PRYYF HFR VAIVFVOYR VFYNAQ YRGGREF"], ["PNFU EHYRF RIRELGUVAT","RAGRE GUR ARJ FYNAT YLEVPF","PBZCYRGR 'RAGRE GUR JH-GNAT' YLEVPF"], ["TLŰEŰ TLŰEŰ, URYYÓ?","JUNG'F GUR HAVPBQR SBE OHQNCRFG?","RKGENPG YRGGREF ONFRQ BA UHATNEVNA PBQRF"], ["QRIVYVFU AHZORE ANZRF","UROERJ AHZREBYBTL ERIRNYF JUB'F JEBAT","HAVPBQR EBJ BQQ-BARF-BHG HFVAT TRZNGEVN"], ["TNZR BS PUNAPR","ORG LBH FUBHYQ TVIR GUR BGUREF N FCVA","NYY GUR YRNQF VA QRRE UHAGRE JRER GUVF"], ["ERFG AHZORE CRNPR","GURL NER FHEIVIRQ OL GURVE FCBHFRF","SVYY VA OYNAXF SBE GUR 36 PYHO"], ["FXVC SBE ERSNPGBE","TB SBHEGU NAQ FRRX AHZREVPNY CNGGREAF","ZRFFNTR RAPBQRF AHZORE BS SNPGBEF"], ["UVTUYL QENZNGVP GENAFNPGVBAF","CBYGV NQQF N OHAPU NAQ ERZBIRF FBZR","QENZNGVP FVGHNGVBAF VAVGVNYF ZNGUF"], ["PURDHRERQ GUR GNOYR","SVEFG SBHE: ULQEN URNYVAT OHEAG YVGUTBJ","SVAQ GUR ZVFCYNPRQ CREVBQVP RYRZRAGF"], ["'OVT' CBCFGNE'F ERIREFRQ","V YBIRQ URE FBATF SEVRAQOBL NAQ VQRN ONQ","ERIREFR NEVNAN TENAQR FBATF VAQRK RKGENF"], ["EHA GUR FGNGF","JUB JBHYQ JVA: N QENTBA BE N ORUBYQRE?","QVSSRERAPR VA ZVQQYR JBEQ FGNGF, 5R Q&Q"], ["YBJREPNFR GLCBTENCUL SRNGHERF","WHFG YVFGRA N GVGGYR GB GUR PUNENPGREF","YBJREPNFR WBGF NAQ PEBFFONEF VA ZBEFR"], ["FHVG VA UNAQ","TBGGN HFR JUNG'F VA LBHE UNAQF, GJVPR","AHZORE PNEQF OL FHVG FCRYY FBZRGUVAT"], ["GJVAXYR GJVAXYR ONAARE","AB NYCUNORG PBHYQ UNAQYR ORGFL'F JBEX","AHZORE BS FGNEF QRFPEVORF CBYLTBA"], ["ZNGPUVAT TEVQ SRNGHERF","BAYL BAR VAFGNAPR BS ERSRERAPRF, JRVEQ","VQRAGVSL JBEQF VA PBEERFCBAQVAT TEVQF"], ["FURYGRE ENFPNY PEHFGNPRNA","FGNEG JURERIRE LBH JNAG, QBA'G YBBX SNE","EVIRE VF CB, XVQ VF FPNZC, TBBQ YHPX"], ["ANIVTNGVAT AFJ PBBEQVANGRF","GUR JVYY EBTREF UVTUJNL VF GBB YBAT URER","UVTUJNL AHZOREF VAQVPNGR CBF/QVFGNAPR"], ["IVQRBTNZR YBER'F QRRC","GBZBEEBJ JVAQVAT FBZR EVQQYR AHZOREF","ZBEEBJJVAQ TVIRF VAQRK VAGB FGNE JBHAQ"], ["CHG VA SYNZRF","UREOREG ZBEEVFBA JNF PUNATRQ SBERIRE","JEBAT YRGGREF SEBZ UVAQRAOHET ERCBEG"], ["OBHAPR VAGB NQRYNVQR","JUB JBHYQ JVA: 1 CUBRAVK BE ZNAL UNJF?","36REF SVANYF UVFGBEL UNF FBZR PUNATRF"], ["QHQ TVSG ZNTVP","ABGUVAT NF TBBQ NF N AVZOHF, GUBHTU","VAQRK QHQYRL'F CERFRAGF OL PBYHZA PBHAGF"], ["FGEVXVAT NQQVGVBAF ERDHVERQ","FBZRGUVAT ZNEXF GUR FCBG SBE GUVF FCBEG","NQQ FGEVXR BE NA K NAQ HFR OVANEL"], ["ZVKRQ HC GNPGVPF","PBZCNERQ GB NEG BS JNE GUVF VF YNPXVAT","ZVFFVAT 36 FGENGNTRZF NAQ PUNCGREF"], ["IEBBZ NEBHAQ JVAAREF","WHFG BAR PVEPHYNE GENPX? OBEVAT","FJNC 2020 ANFPNE GBC 16 JVGU GENPX JBEQF"], ["PNEGBA EBLPR OBHDHRG","ONFVPNYYL GUERR QBMRA VA FRGF BS GUERR","GREANEL FRGF SEBZ RTTF, EBYYF, NAQ EBFRF"], ["NPGBEF VA GRZCYR","WRG YV VF 2 ZNXR XHAT SH ZBIVRF","VAQRK VAGB XHAT SH NPGBE FHEANZRF"], ["YNJ RASBEPRZRAG DHNEGREF","YNJ NAQ BEQRE NAQ PNFU NAQ OHVYQVATF","SNPGF NOBHG ANGVBANY CBYVPR NAQ ZBARL"], ["BVY BE QRQHPGVBA","RIRAGHNYYL ENAXF NAQ ERTVZRAGF BIREYNC","SNZBHF CHMMYR RHYRE CEBIRQ VZCBFFVOYR"], ["ZBIVRF GB HAVPBQR","V NZ GUR ZBIVR 8 SBEGAVTUGF ABGVPR","PBAIREG GB ZBIVRF HAVPBQR SEBZ BSSFRG"], ["FGNGR BS ZRAQ","SNPGF NOBHG URER ZNYR ZR TERRA JVGU ??","SVK SNPGF NOBHG ARINQN NZBAT ARVTUOBHEF"], ["YRGGREF XRLOBNEQ PELCGVP","GLCVAT VF RNFL NF CEVBEV FGVAT FRPGVBA","BSSFRG XRLOBNEQ YRGGREF GB SBEZ PELCGVP"], ["VAPBZCYRGR PBAIREFVBA ERDHVERQ","GUR ONFVP SBEZNGVBA VF UNEQ GB JBEX","NSSVK VA/BHG NAQ PBAIREG OVANEL GB URK"], ["URYVNPNY ANHGVPNY ERSRERAPRF","V'IR SYNTTRQ N OHAPU BS QRPNAGREF","HFR QRPNAF OL MBQVNP GB ERNQ FRZNCUBER"], ["PLPYR ZBHAGNVA REEBEF","GUVF EBGGRA SHWV NCCYR VF N OVG BSS!","EBG 36 IVRJF GVGYRF OEBGURE VF N OENAQ"]];
 var answers = ["URJ","JUNG","UNGGRE","RNFG","ONYNFFNTLNEZNG","ORNFG","JUVGR","PNGUREVAR","VAANGR","QVFNFGRE","CNGGREAF","OHGREN","LNUGMRR","UBEVMBAGNY","GNYBA","CRAGNTENZ","CEBPHENOYR","BHGCHG","UNMNEQ","PVIVYVMNGVBA","VASYHRAMN","ONYYRE","CVCROBZO","OBHYRF","LNATGMR","SVGMTRENYQ","SYBEVFG","SVTUGRE","OEVOREVRF","FCBVYREF","UNAQ","FNAQFGBAR","FUVSGRQ","UVFGBEL","NCBCUVF","CEVAGRE","SEVRAQFUVC"];
 
-var hintButtonDetails = [["Bronze", "#AD8A56"], ["Silver", "#B4B4B4"], ["Gold", "#C9B037"]];
+var hintButtonDetails = [["Bronze", "#E0BD89"], ["Silver", "#d3d3d3"], ["Gold", "#FCE36A"]];
 document.getElementById("grid-div").appendChild(createTable(tableData));
 var myState = generateState();
 myState = getStateFromCookies(myState);
