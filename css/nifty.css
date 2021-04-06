@@ -12,7 +12,7 @@
     background: lightgray;
     text-align: center;
     font-family: monospace;
-    font-size: x-large;
+    font-size: 19px;
 	position: relative;
 	height: 39px;
 }
@@ -32,7 +32,7 @@
     border: 0;
     background: none;
     text-align: center;
-    font-size: x-large;
+    font-size: 19px;
     font-family: monospace;
     text-transform: uppercase;
 }
@@ -51,12 +51,8 @@
 
 }
 
-.hint-selected {
-	background: silver !important;
-}
-
 button.hint-button {
-	width: 80%;
+	width: 50%;
 	font-size: large;
     font-family: monospace;
 }
