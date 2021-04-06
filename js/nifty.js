@@ -142,7 +142,7 @@ function checkAnswer(ID, userInput) {
 			answer.parentElement.style.removeProperty('background');
 		}
 	} else if (answer.value.toUpperCase() == rot13(answers[ID])) {
-		answer.parentElement.style.background = 'lightgreen';
+		answer.parentElement.style.background = 'lightblue';
 		if (ID == 36 && userInput) {
 			alert("Congratulations! You've finished the Nifty Puzzle Hunt! If you have any thoughts or feedback, please send them through via the email listed above on this page. Hope it was fun!");
 		}
