@@ -55,7 +55,7 @@ function refreshHints(cellID) {
 		if ((currentScore & Math.pow(2, i)) == 0) {
 			var button = document.createElement("BUTTON");
 			button.classList.add("hint-button", hintButtonDetails[i][0]);
-			button.innerHTML = hintButtonDetails[i][0];
+			button.innerHTML = hintButtonDetails[i][0] + " Hint";
 			button.id = "hint-" + cellID + "-" + i;
 			button.addEventListener("click", revealHintEvent);
 			cell.appendChild(button);
