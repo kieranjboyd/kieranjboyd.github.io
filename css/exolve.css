@@ -10,8 +10,7 @@
 }
 
 .xlv-grid-parent {
-	padding: 2px;
-	background: black;
+	border: black solid 2px;
 }
 
 .xlv-answer {
