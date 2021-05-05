@@ -1,37 +1,39 @@
+<!DOCTYPE html>
 <html>	
-<head>	
-<title>Random Images</title>
-<style type="text/css">	
-	body
-	{
-		background-position: top left;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-
-</style>	
-<script>	
-	api_endpoint = "https://api.unsplash.com/search/photos?page=1&client_id=IVIequnZQs5JaEYQMIIWnu76-rOr0sZ9MB6PUseblHk&query=presentation&fit=max";
-	function refresh() {
-		var request = new XMLHttpRequest();
-		request.open("GET",api_endpoint,true);
-		request.onload = function(){
-			if(request.readyState == 4 && request.status == 200){
-				data = JSON.parse(request.response);
-				var results = data.results;
-				var result = results[Math.floor(Math.random() * results.length)];
-				document.body.style.backgroundImage = "url('" + result.urls.regular + "')";
+	<head>	
+		<title>Random Images</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">	
+			body
+			{
+				background-position: top left;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
-		}
-		request.onerror = function(){
-			console.log("Network Error")}
-		request.send();
-	}
-	window.onload = refresh;
-	window.onclick = refresh;
-</script>	
-</head>	
-<body>	
 
-</body>	
+		</style>	
+		<script>	
+			api_endpoint = "https://api.unsplash.com/search/photos?page=1&client_id=IVIequnZQs5JaEYQMIIWnu76-rOr0sZ9MB6PUseblHk&query=presentation&fit=max";
+			function refresh() {
+				var request = new XMLHttpRequest();
+				request.open("GET",api_endpoint,true);
+				request.onload = function(){
+					if(request.readyState == 4 && request.status == 200){
+						data = JSON.parse(request.response);
+						var results = data.results;
+						var result = results[Math.floor(Math.random() * results.length)];
+						document.body.style.backgroundImage = "url('" + result.urls.regular + "')";
+					}
+				}
+				request.onerror = function(){
+					console.log("Network Error")}
+				request.send();
+			}
+			window.onload = refresh;
+			window.onclick = refresh;
+		</script>	
+	</head>	
+	<body>	
+
+	</body>	
 </html>	
