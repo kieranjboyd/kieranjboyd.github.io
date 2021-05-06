@@ -4,25 +4,28 @@
 		<title>Random Images</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style type="text/css">	
-			body
-			{
-				background-position: top left;
-				background-repeat: no-repeat;
-				background-size: cover;
+			html, body, div#bg {
+				height: 100%;
+				margin: 0px;
 			}
-
+			div#bg
+			{
+				position: relative;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: auto;
+			}
 		</style>	
 		<script>	
-			api_endpoint = "https://api.unsplash.com/search/photos?page=1&client_id=IVIequnZQs5JaEYQMIIWnu76-rOr0sZ9MB6PUseblHk&query=presentation&fit=max";
+			api_endpoint = "https://api.unsplash.com/photos/random?client_id=IVIequnZQs5JaEYQMIIWnu76-rOr0sZ9MB6PUseblHk";
 			function refresh() {
 				var request = new XMLHttpRequest();
 				request.open("GET",api_endpoint,true);
 				request.onload = function(){
 					if(request.readyState == 4 && request.status == 200){
 						data = JSON.parse(request.response);
-						var results = data.results;
-						var result = results[Math.floor(Math.random() * results.length)];
-						document.body.style.backgroundImage = "url('" + result.urls.regular + "')";
+						var url = data.urls.regular;
+						document.getElementById("bg").style.backgroundImage = "url('" + url + "')";
 					}
 				}
 				request.onerror = function(){
@@ -34,6 +37,6 @@
 		</script>	
 	</head>	
 	<body>	
-
+		<div id="bg"></div>
 	</body>	
 </html>	
