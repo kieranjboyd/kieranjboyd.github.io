@@ -31,6 +31,15 @@
 	margin-bottom: 50px
 }
 
+.xlv-blue-plus-yellow-bg {
+	text-decoration-color: #3eb0ff;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-skip-ink: none;
+	background-color: yellow;
+}
+
 @media screen and (max-width: 500px) {
 	.xlv-clues-box, .xlv-answer, #exolve1, .xlv-grid-and-clues-flex, .xlv-grid-panel {
 		width: 100% !important;
