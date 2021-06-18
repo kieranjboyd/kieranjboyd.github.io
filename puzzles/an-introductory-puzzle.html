@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - An Introductory Puzzle</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+		<style type="text/css">
+			.xlv-
+		</style>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-an-introductory-puzzle
+							exolve-title: An Introductory Puzzle
+							exolve-setter: Binder
+							exolve-width: 4
+							exolve-height: 4
+							exolve-grid:
+								M A_D E_
+								U+P I N 
+								K E Y+B 
+								O A R|D 
+							exolve-across
+								1 Brought about/created/amassed content (4) reverse(hidden(creatED/AMassed))
+								3 Some sharp insertion (3) hidden(sharP INsertion)
+								5 Place to land a boat, we hear (3) homophone(quay)
+								6 Alternative when moving through some waves (3) homophone(or)
+							exolve-down
+								1 Letter from Mykonos, you hear (2) start(Mykonos) + homophone(you)
+								2 Bewildering furniture annoyance, essentially (3, abbr.) (3)* middles(bewilDering furnIture annoYance)
+								3 Bit of produce, every one (3) start(Produce) + EA
+								4 Briefly returning "Didn't bother none" (3, abbr.) (3)* reverse(starts (Didn't Bother None))
+								5 Right old smack back (2, abbr.) (2)* reverse(O + end(smacK))
+							exolve-preamble:
+								<p>This puzzle features two introductions:</p>
+								<ul>
+									<li>
+										Some portion of the clues serve as an introduction to <a href="http://www.alberichcrosswords.com/pages/andlit.html">&lit</a> clues, in which the text is both the definition <i>and</i> the wordplay. Normally these types of clues are indicated by an exclamation mark, but here I've removed all instances of that punctuation to avoid the impression of yelling.
+									</li>
+									<li>
+										A specific individual is introduced via a wordplay-only clue featured in the final grid, which also hints at how they came by their nickname.
+									</li>
+								</ul>
+							exolve-question: Who is introduced? (20)* KIERAN BOYD
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-06-19</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
