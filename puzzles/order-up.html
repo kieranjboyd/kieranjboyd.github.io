@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Order Up</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+		<style type="text/css">
+			.xlv-
+		</style>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-order-up
+							exolve-title: Order Up
+							exolve-setter: Binder
+							exolve-width: 6
+							exolve-height: 6
+							exolve-grid:
+								P I S C E_S
+								H|S|W H A T
+								I|S I E V E
+								L E P E R|A
+								L I_E S|I|K
+								Y O D E L S
+							exolve-across
+								1 Mixed <span class="clue-nina-1">crayon</span> spices for ~{fish in the sky?}~ (6) anagram(SPICES)
+								6 Start to <span class="clue-nina-1">let us</span> wear headwear, ~{huh?}~ (4) start(Wear) + HAT
+								8 The first lady is returning <span class="clue-nina-1">Chi's</span> ~{straining device}~ (5) reverse(EVE + IS)
+								9 ~{Outcast}~'s rotten peel and bit of rice <span class="clue-nina-1">paddy</span> (5) anagram(LEPER) + start(Rice)
+								10 ~{Artificial (i.e. suprious) <span class="clue-nina-1">source</span> items!}~ (4) hidden, &lit
+								11 <span class="clue-nina-1">He'll</span> swap marks for yen in runway workers' ~{long distance calls}~? (6) swap(MODELS, M, Y)
+							exolve-down
+								1 ~{Lovely city}~ ~{like Jackson or Collins?}~ (6) double definition
+								2 Building site is lacking top <span class="clue-nina-2">wit</span>tier ~{Japanese immigrants}~ (5) anagram(subract(SITE IS, start(Tier)))
+								3 ~{Hit}~ when exhausted southpaw standing on two feet out<span class="clue-nina-2">wit</span>s blockhead (6) ends(SouthpaW) + subtract(BIPED, start(Block))
+								4 ~{Potentially Swiss or American}~ revolutionary is in Spain with Egyptian leader (6) CHE + ES + start(Egyptian)
+								5 Reported risks for ~{pieces of meat}~ (6) homophone(stakes)
+								7 One half<span class="clue-nina-2">wit</span> dozen welcoming right long ~{month in France}~ (5) insert(R, A + VI) + L
+							exolve-preamble:
+								<p>Hopefully you can help put this puzzle in order...<\p>
+								<p>Each across clue contains an extra word (or two) which should be ignored when solving. Reading those items, in clue order, will reveal one order for one order. (For one item, pretend you're from 1 Down.)<\p>
+								<p>As for the down clues, half of them have been modified to request one item. (Again, pretend you're from 1 Down.) The other half reveal a second, appropriate, order.</p>
+							exolve-question: What is the first order? (20)* BURGER
+							exolve-question: What is the second order? (20)* PHILLY CHEESESTEAKS
+							exolve-nina: clue-nina-1 #D2B48C
+							exolve-nina: a1 a2 a3 a4 a5 a6 d1 d2 d3 d4 d5 d6 f1 f2 f3 f4 f5 f6 clue-nina-2 #FFD700
+							exolve-explanations:
+								<p>I'll leave it to <a href="https://www.youtube.com/playlist?list=PLAzrgbu8gEMIkFTtpY-Vn0Kjj_LQ0pE0M">George Motz</a> to explain the ideal anatomy of a burger (from heel to crown).</p>
+								<p>But in terms of Philadelphian cuisine, it is this author's opinion that a cheesesteak '<a href="https://www.inquirer.com/philly/food/how-to-order-philly-cheesesteak-wiz-wit-20180705.html">wit</a>' is the correct order.</p>
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-06-16</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
