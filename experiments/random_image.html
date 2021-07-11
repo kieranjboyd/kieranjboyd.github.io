@@ -17,7 +17,7 @@
 			}
 		</style>	
 		<script>	
-			api_endpoint = "https://api.unsplash.com/photos/random?client_id=IVIequnZQs5JaEYQMIIWnu76-rOr0sZ9MB6PUseblHk";
+			api_endpoint = "https://api.unsplash.com/photos/random?client_id=IVIequnZQs5JaEYQMIIWnu76-rOr0sZ9MB6PUseblHk&orientation=landscape";
 			function refresh() {
 				var request = new XMLHttpRequest();
 				request.open("GET",api_endpoint,true);
@@ -25,18 +25,28 @@
 					if(request.readyState == 4 && request.status == 200){
 						data = JSON.parse(request.response);
 						var url = data.urls.regular;
-						document.getElementById("bg").style.backgroundImage = "url('" + url + "')";
+						var img = new Image();
+						img.onload = function() {
+							document.getElementById("bg").style.backgroundImage = "url('" + url + "')";
+							document.getElementById("bg").style.backgroundSize = "cover";
+						}
+						img.src = url;
 					}
 				}
-				request.onerror = function(){
-					console.log("Network Error")}
+				request.onerror = function() {
+					console.log("Network Error");
+				}
 				request.send();
 			}
-			window.onload = refresh;
 			window.onclick = refresh;
+			window.onkeyup = function(e){
+				if(e.keyCode == 32){
+					refresh();
+				}
+			}
 		</script>	
 	</head>	
 	<body>	
-		<div id="bg"></div>
+		<div id="bg" style="background-image: url('../media/ted_logo.png')"></div>
 	</body>	
 </html>	
