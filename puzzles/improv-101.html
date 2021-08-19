@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Improv 101</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+		<style type="text/css">
+			.xlv-
+		</style>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-improv-101
+							exolve-title: Improv 101
+							exolve-setter: Binder
+							exolve-width: 6
+							exolve-height: 6
+							exolve-grid:
+								Y E_A R_L Y
+								E U_G H|Y|E
+								A|Y O U R S
+								S I N G E+S
+								T|K|Y_O R_E
+								S E N S E S
+							exolve-across
+								1 <span class="nina-3">E</span>ach r<span class="nina-3">a</span>ilway keeps line ~{running ahead of schedule}~ (6) [EARLY] <br>EA ("each") + RY ("railway") around ("keeps") L ("line")
+								5 ~{<span class="nina-2-new">Organ</span>}~ from European Union goldfinch skin (4) <br>EU + outside letters ("skin") of "GoldfincH" <span class="nina-2-old">Groan</span>
+								7 <span class="nina-3">R</span>otten, sour ~{things we share}~ (5) [OURS] <br>anagram ("Rotten") of SOUR
+								8 Sewing machine that drops the <span class="nina-2-new">fat</span> ~{burn}~ (5) [SINGE]<br>SINGE(-r) ("Sewing machine") minus the last ("aft") letter <span class="nina-2-old">aft</span>
+								9 <span class="nina-3">N</span>ot even our men provide ~{a resource in Minecraft}~ (4) [ORE] <br>odd letters ("Not even") of "OUR MEN"
+								10 ~{<span class="nina-2-new">Flees</span>}~ in six directions (6) <br>"six" instances of N/E/S/W ("directions") <span class="nina-2-old">Feels</span>
+							exolve-down
+								1 <span class="nina-3">H</span>eadless creatures are ~{bridge defenders}~ (6) [EASTS] <br>BEASTS ("creatures") removing the first letter ("Headless")
+								2 ~{Not f<span class="nina-3">e</span>eling fine}~ silver of New York, rejects start to <span class="nina-2-new">enfold</span> (5) <br>AG ("silver") + OF + NY - ("rejects") E ("start to Enfold") <span class="nina-2-old">fondle</span>
+								3 ~{H<span class="nina-3">a</span>rp}~ on about <span class="nina-2-new">relay</span> signs of lunar year (4) <br>first letters ("early signs") of Lunar Year "on" RE ("about") <span class="nina-2-old">early</span>
+								4 ~{<span class="nina-3">P</span>aths on the slalom course}~ that is ~{half of Sussex}~ (6) [ESSES] <br>double definition
+								6 <span class="nina-2-new">Signing</span> 'Colour Runs' for ~{science fiction awards}~ (5) <br>homophone ("Singing") of "hue goes" ("colour runs") <span class="nina-2-old">Singing</span>
+								7 <span class="nina-3">S</span>ome unlikely ~{leader of the United States}~ (4) [IKE] <br>hidden ("some") in "unlIKEly"
+							exolve-preamble:
+								<p>Welcome to your free improv taster! Let's split into two groups and try some exercises.<\p>
+								<ol>
+									<li>You've probably already heard the two-word mantra that some consider the first rule of improv. Half of the clues must (cryptically) implement that rule before entry in the grid, which means that their enumerations are a little off. Oops!</li>
+									<li>The other half of the clues have responded with some interesting moves (in a similarly cryptic way). In clue order, the first letters of the words involved spell out what there was at first, and then what these have become!</li>
+									<li>Let's wrap things up with a third beat. Each time the character from the first activity appears as the nth character in a grid entry, highlight nth character in its clue. (This is turning into a bit of a character island...) Those letters, in clue order, spell what most improvisers want to achieve from this hobby, but applying our first step reveals what they actually do instead.</li>
+								</ol>
+							exolve-question: What was there at first/What have they become? (20)* GAFFES/OFFERS
+							exolve-question: What do improvisers (actually) do? (20)* (Y)EARN HEAPS
+							exolve-nina: nina-2-old #F08080
+							exolve-nina: nina-2-new  #90EE90
+							exolve-nina: nina-3 a6 b4 c2 e5 f6 steelblue
+							exolve-explanations:
+								<p>The first rule of improv (arguably) is 'Yes And', so well done to the first group for prepending Y to your answers in the grid.</p>
+								<p>Great work to the second group for heeding the advice of Second City alum Tina Fey - there are no mistakes in improv, only opportunities.</p>
+								<p>Unfortunately, while you might think that your new skill will help you EARN HEAPS ... no. But you'll likely still YEARN HEAPS!</p>
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-07-13</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

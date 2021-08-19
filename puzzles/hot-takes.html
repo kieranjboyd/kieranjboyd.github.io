@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Hot Takes</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+		<style type="text/css">
+			.xlv-
+		</style>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-hot-takes
+							exolve-title: Hot Takes
+							exolve-setter: Binder
+							exolve-width: 12
+							exolve-height: 12
+							exolve-grid:
+								B A_B I_S H+B A S_A L_T 
+								O U_I S|C|F_E T I_S H+R 
+								A C R E|H A_B A N_E R_O 
+								S|H|D|N|T|S E_R R_A_N_O 
+								T_A S S_I E|I|I+I_S U P 
+								C_R E S_C|N|N A R_C|N|S_
+								M|L|Y O_K_O|D|G H_O S T_
+								A Y_E_S+F|R+R E P R O S 
+								R A_T F_L E A+L|S|P|L|C 
+								C H_I P_O T L_E|S I D_E 
+								I|R_E A_P E R+S|T_O R_N 
+								E G R E S S|U S A N C E 
+							exolve-across
+								1 Ms Streisand <span class="nina-3">l</span>ouses one hot ~{YouTube binger}~? (6) BAB(I)S + H
+								4 ~{Black mineral composition <span class="nina-3">n</span>ot around core of volcanoes!}~ (6) B(_A_) + SALT
+								8 <span class="nina-3">G</span>ot originally French king with ~{French accords}~ (4) _OUIS
+								10 If set <span class="nina-3">g</span>ambling, tip of hose results in ~{kink}~ (6) IFSET* + H_
+								11 Ignoring the odds, dance<span class="nina-3">d</span> set ~{section of land}~ (4) _A_C_R_E_
+								13 <span class="nina-1">T</span>ale's protagonist to co<span class="nina-1">v</span>er a stoppag<span class="nina-1">e</span> (8) H(A + BAN)ERO
+								14 <span class="nina-1">H</span>eadless user right next to <span class="nina-1">a</span> voided Nintentd<span class="nina-1">o</span> (7) (-u)SER + R + A N_O
+								15 ~{Aussie island}~'s east is <span class="nina-3">g</span>apless (6) EASTIS*
+								17 War<span class="nina-3">d</span>ing pius ~{bats now}~ (<span>2 2</span>) (4)* [IS UP] PIUS*
+								20 ~{<span class="nina-3">D</span>row gradually, briefly}~, put crown before escape (5) CR + ESC
+								21 ~{Agent dealing with Charlie}~ Chaplin's <span class="nina-3">l</span>ap ran around (4) (C_ + RAN)<
+								24 ~{Japenese artist}~ with young and decent Eskimo's ta<span class="nina-3">l</span>l (4) Y + OK + _O
+								25 <span class="nina-1">E</span>nd of reco<span class="nina-1">r</span>ding shot of<span class="nina-1">f</span> (5) _G + SHOT*
+								26 Decla<span class="nina-3">m</span>ation of views and ~{affirmations}~ (4) "eyes"
+								28 ~{<span class="nina-3">L</span>ead ringers}~ are concerning experts (6) RE + PROS
+								31 ~{Verminous parasite}~ in front of reli<span class="nina-4">c @ W</span>ild Leaf (<span>3-4</span>) (7)* [RAT-FLEA] R_ + AT + LEAF*
+								34 <span class="nina-1">S</span>antiago's country adopts a kind of dr<span class="nina-1">i</span>nk vesse<span class="nina-1">l</span> (8) CHI(POT)LE
+								35 ~{Some opponents I <span class="nina-3">r</span>ebate}~! (4) _S I DE_
+								36 <span class="nina-1">P</span>e<span class="nina-1">e</span>r's devastated about a rabb<span class="nina-1">i</span> (6) A in PEER* + R
+								37 ~{Ripped}~ Tron deca<span class="nina-3">l</span>s (4) TRON*
+								38 ~{Leave a ha<span class="nina-3">u</span>l, maybe}~, with small fabric that's spun (6) (S + SERGE)<
+								39 ~{Time to pay}~ off a cuisine, minus fou<span class="nina-4">r % o</span>f fifty (6) (A CUISINE - II)*
+							exolve-down
+								1 <span class="nina-3">M</span>iner, say, holding small ~{crow}~ (5) BOA(S)T
+								2 <span class="nina-1">I</span>n the ear, a chat<span class="nina-1">t</span>ered moan of relie<span class="nina-1">f</span> (<span>4'1 3</span>) (8)* [BIRD'S-EYE] "burred sigh"
+								3 ~{Comedy routine}~ post overwhelms club and <span class="nina-3">m</span>otel (7) S(C + H)TICK
+								4 ~{Zahara Benet who won Ru Paul}~ <span class="nina-3">H</span>ive, twice (4) BE + BE
+								5 By a Rhode Island ~{<span class="nina-3">n</span>ame brand}~ (5) AT + A + RI
+								6 <span class="nina-3">G</span>apless canister active ~{on the water}~ (4) (-c)ASE + A
+								7 Closure of Yaho<span class="nina-4">o! r</span>epressed by rising sport army (6) TRO(_O)PS<
+								9 ~{US politicians'}~ dispatches don't include <span class="nina-3">l</span>aughter (4) SEN(-d)S
+								12 ~{1968 film starring Cliff Robertson}~ and Sea<span class="nina-3">m</span> Lightyear (6) CHAR + LY
+								14 Ron's upset about Mario'<span class="nina-4">s & </span>~{<span class="nina-4">D</span>iego's old man}~ (5) RON(E)S<
+								16 ~{<span class="nina-3">N</span>od ultimately at the heart of rainstorm}~?! (5) D in RAIN*
+								18 <span class="nina-1">C</span>hild bur<span class="nina-1">y</span>ing flying ac<span class="nina-1">e</span> (8) SC(PRO<)ION
+								19 Pri<span class="nina-3">d</span>e samples of tunes compiled are ~{still available}~ (6) _UN_S_O___L_D (Prime letters)
+								22 ~{Forever young}~ and without pay, <span class="nina-3">l</span>eading off (7) (-w)AGELESS
+								23 ~{Peppermint Patty's pal}~ and I came dancing around <span class="nina-3">g</span>un (6) R in ICAME*
+								27 Loud cuts of ~{movies with petty reven<span class="nina-3">g</span>es}~ (5) F + LOPS
+								29 Initially post<span class="nina-4">s #s</span>elfie snap that's ~{a call for attention}~ (4) P_ S_ S_ T_
+								30 ~{Movie part}~ as Ace, one dropping the <span class="nina-3">d</span>ead characters (5) (-a)S (-a)CE (-o)NE
+								32 ~{<span class="nina-3">L</span>ow}~ slow river (4) TIE + R
+								33 ~{Nice warm periods}~ when tees are bod<span class="nina-3">i</span>ed (4) TEES*
+							exolve-preamble:
+								<p>The previous mini-crosswords were themed around a few of my favourite things, and this crossword is no different. Among the clues, 7 are wordplay-only, 30 have had a letter replaced by another, and 5 are otherwise normal. The following steps are best approached one at a time…</p>
+								<ol>
+									<li>The answers to the <span class="nina-1">wordplay-only clues</span> are all members of a set of items that can be ranked with a formal scale. If each item is ranked n within this set of items, the middle letters of the nth word in each clue (in clue order) for a name that identifies each item. The first letters of each clue, and then the last letters of each clue (also in clue order) will further identify the items.</li>
+									<li>The (current) definitive first member of the full set of Step 1 items is represented by a symbol (henceforth referred to as Symbol X). Symbol X is also part of another set of items, the same ones that were added to the previous mini-crosswords. However, the crossword that <i>should</i> have added Symbol X instead involved creating its opposite symbol (thinking outside the box). Take the four extracted strings from the previous crosswords and place them in the same method used in Symbol X's crossword (starting at the top, in the order of the symbols). Got all that? Excellent. Mark this step with Symbol X once you're ready to move on.</li>
+									<li>For each <span class="nina-3">clue with a replaced letter</span>, the original and replaced letters form starting points in the strings added in Step 2, from which to shoot orthogonal lines - these lines will intersect at a grid letter. Those grid letters (in order of their respective clues) will reveal instructions for how to find both why I seek out the items from Step 1, and either:
+									<ul>
+										<li>an 8th item for the set from Step 1</li>
+										<li>a description of what you added in Step 2</li>
+										<li>what results from the items from Step 1 (sorry)</li>
+									</ul></li>
+									<li>The <span class="nina-4">remaining clues</span> each contains their own special addition. The letters immediately before and after the additions (in clue order) spell out either:
+									<ul>
+										<li>linguistically, what these additions represent (especially in response to the items from Step 1)</li>
+										<li>literally, what you found in Step 3</li>
+										<li>cryptically, when prefaced by the name from Step 1, the final addition to my set of favourite things!</li>
+									</ul></li>
+								</ol>
+							exolve-nina: nina-1 palegoldenrod
+							exolve-nina: nina-3 lightgreen
+							exolve-nina: nina-4 lightblue
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-07-19</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

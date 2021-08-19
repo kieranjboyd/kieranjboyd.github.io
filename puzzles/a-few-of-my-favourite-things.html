@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - A Few Of My Favourite Things</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="puzzles.html">Puzzles</a>
+				<a href="comedy.html">Comedy</a>
+				<a href="writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div class="header">
+					<h1>A Few Of My Favourite Things</h1>
+				</div>
+				<div>
+					<p>Thanks so much for testsolving these puzzles!<p>
+					<p>The first four can be done in any order, but the last one should be done … last.</p>
+					<ul id="randomlist">
+						<li><a href="top-hobby.html">Top Hobby</a></li>
+						<li><a href="every-dog-has-her-day.html">Every Dog Has Her Day</a></li>
+						<li><a href="improv-101.html">Improv 101</a></li>
+						<li><a href="war.html">War!</a></li>
+						<script>
+							var ul = document.getElementById('randomlist');
+							for (var i = ul.children.length; i >= 0; i--) {
+								ul.appendChild(ul.children[Math.random() * i | 0]);
+							}
+						</script>
+						<li><a href="hot-takes.html">Hot Takes</a> (do this last!)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

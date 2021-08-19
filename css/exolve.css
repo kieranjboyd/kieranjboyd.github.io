@@ -22,6 +22,10 @@
 	text-decoration: line-through;
 }
 
+.show {
+	display: visible!;
+}
+
 .xlv-grid {
 	position: relative;
 	margin-bottom: -4px;
@@ -29,6 +33,10 @@
 
 #exolve1 {
 	margin-bottom: 50px
+}
+
+div.xlv-clues-box table > tr:last-child > td {
+	padding: 4px 6px 4px 0;
 }
 
 .xlv-blue-plus-yellow-bg {

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Every Dog Has Her Day</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+		<style type="text/css">
+			.xlv-
+		</style>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-every-dog-has-her-day
+							exolve-title: Every Dog Has Her Day
+							exolve-setter: Binder
+							exolve-width: 8
+							exolve-height: 8
+							exolve-grid:
+								•~•_D_A_I_S_•_•~
+								•|Y R S+S O_Y|•
+								S|T A B_L E|A|D
+								I|D+K|P A R K+A
+								A|D E E M+O|K|I
+								D|A|S_P A_D E|S
+								•|Y_E_S+H_E_Y+•
+								•~• S I A D • •
+							exolve-option: allow-chars:•
+							exolve-option: ignore-unclued
+							exolve-across
+								1 ~{Those who've studied for <span class="clue-nina"> many semesters, in short</span>}~, often stress (3) [SRS] <br>alternate letters ("often") of "StReSs"
+								3 ~{Actress Phillipa}~'s <span class="clue-nina">sauce</span> or other starters (3) [SOO] <br>first letters ("starters") of "Sauce Or Other"
+								5 <span class="clue-nina">Fixed</span> a belt and ~{a piece of furniture}~ (5) <br>anagram ("fixed") of "A BELT"
+								7 Electrician removes <span class="clue-nina">coat</span> in ~{a public space}~ (4) <br>sPARKy ("electrician") truncated ("removes coat")
+								8 ~{Judge}~: "<span class="clue-nina">Revoke</span> the end of legal document before Monday" (4) <br>DEE(-d) ("legal document") trimmed ("Revoke the end") +  ("Monday")
+								10 Fixed some animals loudly with ~{part of <span class="clue-nina">a set of garden tools</span>}~ (5) <br>homophone ("loudly") of "spayed" ("Fixed some animals")
+								11 ~{Month in Mexico}~'s amusement centre is <span class="clue-nina">right</span> (3) [MES] <br>"centre" of "amuSEMent", reversed ("right")
+								12 Half <span class="clue-nina">pay attention</span> to nitrogen ~{layer}~ (3) [HEN] <br>"half" of HEed ("pay attention to") + N ("nitrogen")
+							exolve-down
+								1 ~{Ideal, abbreviated}~, arts study, even <span class="clue-nina">after the end of December</span> is gone (3) [STD] <br>"even" letters of "aRtS sTuDy" minus ("is gone") "end of" "decembeR"
+								2 Arranged rose and oak, vanquishing <span class="clue-nina">ducks</span> with ~{garden tools}~ (5) <br>anagram ("Arranged") of ROSE + OAK, minus ("vanquishing") OO ("ducks")
+								3 Mr Neill holds <span class="clue-nina">religion</span>'s third ~{poetry contest}~ (4) <br>SAM ("Mr Neill") around L ("religion's third" letter)
+								4 With nothing to <span class="clue-nina">go on</span>, a king makes ~{wood for barrels}~ (3) [OAK] <br>O ("nothing") + A + K ("king")
+								6 ~{Crumble}~ when boundless freedom is <span class="clue-nina">destroyed</span> (5) <br>anagram ("destroyed") of middle letters of ("boundless") "fREEDOm"
+								7 ~{Encourages}~ gym classes to <span class="clue-nina">drink</span> quietly (4) <br>P ("quietly") inside ("drink") PES ("gym classes")
+								8 ~{Clog up}~ dead <span class="clue-nina">period of time</span> in the morning (3) [DAM] <br>D ("dead") + AM ("period of time in the morning")
+								9 <span class="clue-nina">Core</span> of snake near ~{doll}~ (3) [KEN] <br>middle letters ("Core") of "snaKE Near"
+							exolve-preamble:
+								<p>Welcome to the park - we're celebrating my dog's half birthday! (No, she's not spoilt, she's perfect.) Unfortunately I forgot to prepare the spot for giving a speech, could you help out?<\p>
+								<p>First, complete the grid, which represents the platform where the speech will take place.<\p>
+								<p>Then, add some steps to each side of the grid - each step should include four squares, and should feature a name for the grid (the same word each time, entered clockwise). All words that are extended by the new squares should still be valid words (if you need help, each corresponding clue features a definition for the new word).</p>
+								<p>Finally, replace four letters in the grid with a new letter (the same letter in each case), ensuring that all impacted entries still include valid words (again, you can check clues for a definition). You will reveal two things: (1) my dog's name, and (2) a crown for the birthday girl!</p>
+							exolve-color: lightgreen a1 a2 a3 a4 a5 a6 a7 a8 b1 b8 c1 c8 d1 d8 e1 e8 f1 f8 g1 g8 h1 h2 h3 h4 h5 h6 h7 h8
+							exolve-nina: #ffd233 a3 a4 a5 a6 b2 b7 c1 c8 d1 d8 e1 e8 f1 f8 g2 g7 h3 h4 h5 h6
+							exolve-nina: #fff1bf clue-nina
+							exolve-explanations:
+								<p>Once you've added the steps and their word (DAIS) to the outside, and replaced the corner squares with the letter Y, you should be able to see Daisy's name in a ring, forming a daisy chain!</p>
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-07-13</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
