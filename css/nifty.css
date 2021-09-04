@@ -1,4 +1,4 @@
-#grid-table, #answer-table {
+#grid-table, #answer-table, table.grid-table, div.blurable:not(.blur) > table {
 	overflow-x: auto;
     display: block;
 }
@@ -63,6 +63,11 @@ button.hint-button {
 
 .blur td {
 	background: transparent;
+}
+
+.blur table {
+	overflow-x: hidden;
+	display: block;
 }
 
 #showall {

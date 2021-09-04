@@ -13,6 +13,13 @@ document.querySelectorAll('.blurable').forEach(item => {
 	})
 });
 
+document.querySelectorAll('div.blurable a').forEach(item => {
+	if (item.href.substring(0, 4) == "http") {
+		item.target = "_blank";
+		item.rel = "noopener noreferrer"
+	}
+});
+
 var showall = document.getElementById('showall');
 showall.addEventListener('click', function() {
 	if (showall.innerHTML == "Show All") {
