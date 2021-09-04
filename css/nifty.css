@@ -54,3 +54,20 @@ button.hint-button {
 	font-size: large;
     font-family: monospace;
 }
+
+.blur, .blur a {
+	color: transparent;
+	text-shadow: 0 0 10px rgba(0,0,0,0.5);
+	cursor: pointer;
+}
+
+.blur td {
+	background: transparent;
+}
+
+#showall {
+	width: 100px;
+	font-size: large;
+	font-family: 'Bitter';
+	text-alignment: center;
+}
