@@ -76,3 +76,15 @@ button.hint-button {
 	font-family: 'Bitter';
 	text-alignment: center;
 }
+
+table:not(.grid-table) td:not(:first-child),table:not(.grid-table) th:not(:first-child) {
+	padding-left: 8px;
+}
+
+table:not(.grid-table) td:not(:last-child) {
+	padding-right: 8px;
+}
+
+table:not(.grid-table) th {
+	text-align: left;
+}
