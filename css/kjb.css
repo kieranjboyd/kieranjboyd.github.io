@@ -78,9 +78,9 @@ li > ul {
 	max-width: 1000px;
 	width: 80%;
 	margin: 0 auto;
-	padding: 20px;	
-		min-height: calc(100% - 51px);
-		position:relative;
+	padding: 20px 20px 40px 20px;	
+	min-height: calc(100% - 60px);
+	position:relative;
 }
 
 .header {
