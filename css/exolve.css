@@ -52,3 +52,21 @@ div.xlv-clues-box table > tr:last-child > td {
 		overflow-x: scroll;
 	}
 }
+
+
+span.nina-hidden[style*="background-color"]:not([style*="transparent"]) {
+	display: unset;
+	font-weight: bold;
+}
+
+span.nina-hidden {
+	display: none;
+}
+
+span.nina-strikethrough[style*="background-color"]:not([style*="transparent"]) {
+	text-decoration: line-through;
+}
+
+span.nina-strikethrough + span.nina-hidden, span.nina-hidden + span.nina-strikethrough {
+	margin-left: 4px;
+}
