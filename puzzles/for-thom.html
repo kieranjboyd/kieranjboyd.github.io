@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - For Thom</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+		<style type="text/css">
+			.xlv-
+		</style>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-for-thom
+							exolve-title: For Thom (and Alice)
+							exolve-setter: Binder
+							exolve-width: 5
+							exolve-height: 5
+							exolve-grid:
+								O W E . .
+								N O R A .
+								C R O S S
+								E D D I E
+								. S E A T
+							exolve-across
+								1 See red, perhaps
+								4 SNL alum Dunn
+								6, 3d  (With 2 Down) Ford, hybrid, and crabby
+								8 SNL alum Murphy
+								9 It takes a buttload
+							exolve-down
+								1 Players in a Real Madrid team
+								2 See 6 Across
+								3 Wear
+								5 Source of the red disease in Pandemic
+								7 [1 of 430 potential definitions]
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-09-30</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

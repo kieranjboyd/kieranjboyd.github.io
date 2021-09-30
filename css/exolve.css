@@ -31,10 +31,6 @@
 	margin-bottom: -4px;
 }
 
-div.xlv-clues-box table > tr:last-child > td {
-	padding: 4px 6px 4px 0;
-}
-
 .xlv-blue-plus-yellow-bg {
 	text-decoration-color: #3eb0ff;
     text-decoration: underline;
