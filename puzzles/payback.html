@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Payback</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+		<style type="text/css">
+			.xlv-
+		</style>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-payback
+							exolve-title: Payback
+							exolve-setter: Binder
+							exolve-width: 6
+							exolve-height: 6
+							exolve-grid:
+								S T A R_C H_
+								C A R L O S 
+								U R G E D|H
+								D|D O G G O 
+								S_I N_G E R 
+								A S S O R T 
+							exolve-across
+								1 ~{Potato or plantain}~ found in side<span class="nina-hidden">real</span> church? (6)<br>STAR + CH
+								5 ~{Originally, Charlie Sheen}~ and Oscar loser st<span class="nina-hidden">rand</span>ing the ends (6)<br>_CAR LOS_
+								8 ~{Pushed}~ strange drug that includes ca<span class="nina-hidden">yen</span>ne, essentially (5)URG(_E_)D [DRUG*]
+								9 Good German leader <span class="nina-hidden">buck</span>led ~{one called 'Big Pupper'?}~ (5)<br>(GOOD + G_)*
+								10 ~{<span class="nina-hidden">Euro</span>Vision representative, say}~, is ~{someone who burns?}~ (6)<br>double definition
+								11 Im<span class="nina-hidden">pound</span>age of gold by assistant's ~{suit}~ (6)<br>ASS(OR)T
+							exolve-down
+								1 As a cruise regularly ~{races with the wind}~ … (5) [SCU<span class="nina-2">D</span>S]<br>_S_C_U_S_
+								2 … ~{one time machine}~ travels uncovered across a road (6) [TARD<span class="nina-2">I</span>S]<br>T(A + RD)S [T_S]
+								3 ~{A gas primarily with no reaction}~! (5) [A<span class="nina-2">R</span>GON]<br>A + G_ + NO* [&lit]
+								4 ~{Old geezer}~ from Los Angeles ballteam, naked (6) [<span class="nina-2">C</span>ODGER]<br>(-d)ODGER{-s)
+								6 Looking gutted, say ~{"Get yer hands off me!"}~ (5) [L<span class="nina-2">E</span>GGO]<br>L_G + GO
+								7 ~{Quiet, or}~ lacking what's taken from the Across clues in either Brazil, South Africa, Japan, the USA, Germany, or the UK (5) [SHOR<span class="nina-2">T</span>]<br>SH + OR
+							exolve-preamble:
+								<p>I've borrowed <span class="nina-1">something from one word in each of the Across clues</span>, and <span class="nina-2">the wordplay for each Down clue is lacking one letter</span>. Highlighting those letters in the grid will reveal a two-word description for how I'll make it up to you.</p>
+							exolve-question: How will I make it up to you? (20)* DIRECT CREDIT
+							exolve-nina: nina-hidden lightskyblue
+							exolve-nina: nina-1 lightskyblue
+							exolve-nina: nina-2 a3 b2 c5 d4 e6 f1 gold
+							exolve-explanations:
+								<p>I'm good for it, I promise. Do you have PayPal?</p>
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-10-08</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
