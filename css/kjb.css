@@ -243,3 +243,7 @@ span.material-icons {
 button {
 	font-size: medium;
 }
+
+blockquote.poem {
+	line-height: 1.5;
+}
