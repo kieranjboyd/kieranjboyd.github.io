@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - An Omission</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzling stuff</a>
+				<a href="../comedy.html">Comic stuff</a>
+				<a href="../writing.html">Writing stuff</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<style>
+					#xlv1-status, #xlv1-saving, #xlv1-small-print {
+						display: none;
+					}
+					#xlv1-controls-etc {
+						margin-bottom: 20px;
+					}
+				</style>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-an-omission
+							exolve-title: An Omission
+							exolve-setter: ???
+							exolve-width: 6
+							exolve-height: 6
+							exolve-grid:
+								W I_G W A_G
+								R|S A I L|A
+								I N G R I D
+								G A M I N S
+								H|P_A N T+B
+								T I N G L Y
+							exolve-across
+								1 Hairy rug with a good ~{billow to and fro}~ (6)<br>WIG + W + A + G
+								5 ~{Fabric canvas}~' auction is broadcast (4)<br>"sale"
+								7 ~{Actor in Casablanca}~ and in Matrix (6)<br>IN + GRID
+								8 ~{Young urchins}~ playing mostly in front of school (6)<br>GAMIN(-g) + S
+								9 ~{Half a pair of slacks?}~ ~{Gasp!}~ (4)<br>ddef. [as in "pants"]
+								10 Six down, shifting around midnight club, ~{all prickly}~ (6)<br>(LI(_G_)NT)* + Y ["LINT" is 6D, "G" is from "mid-niGht"]
+							exolve-down
+								1 <b>Word A</b> (6)
+								2 Giga-Mix manga ~{comic}~ (6)<br>G + MANGA*
+								3 Why ring out loud? ~{It's hot, faulty, or hard, on occasion}~ (6)<br>"why ring"
+								4 <b>Word B</b> (6)
+								5 ~{Thanos' hand motion}~'s spinning woks (4)<br>PANS<
+								6 ~{Fuzzy clothing build-up}~ is still intact, partly (4)<br>_l int_
+							exolve-preamble:
+								<p>This crossword is missing a bit. Sorry! It's just a tiny thing, and it's normally found in similar wordy constructions, but it's not found in this grid!<\p>
+								<p>To assist with solving, <b>Word A</b> stands for an author, and <b>Word B</b> is a work of his with a similar omission.<\p>
+							exolve-explanations:
+								<p>If you didn't spot what's missing up till now, you should probably look up <a href="https://en.wikipedia.org/wiki/Gadsby_(novel)" rel="noopener noreferrer" target="_blank">Gadsby</a> (by Wright) or <a href="https://en.wikipedia.org/wiki/A_Void" rel="noopener noreferrer" target="_blank">La Disparition</a> (by … uhh … I can't say), both of which mirror my disinclination for "fifthglyphs" - that symbol that sits amid "D" and "F" in our ABCs. Shout out to <a href="https://www.reddit.com/r/AVoid5/" rel="noopener noreferrer" target="_blank">/r/Avoid5</a>!<p>
+							exolve-relabel:
+								clear: Undo this
+								clear-all: Undo all!
+								check: Confirm this
+								check-all: Confirm all!
+								reveal: Show this
+								reveal-all: Show all!
+								hide-ninas: Un-show ninas
+								submit.hover: Think twice before submitting
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-06-16</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

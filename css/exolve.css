@@ -49,17 +49,16 @@
 	}
 }
 
-
-span.nina-hidden[style*="background-color"]:not([style*="transparent"]) {
+.nina-hidden[style*="background-color"]:not([style*="transparent"]) {
 	display: unset;
 	font-weight: bold;
 }
 
-span.nina-hidden {
+.nina-hidden {
 	display: none;
 }
 
-span.nina-strikethrough[style*="background-color"]:not([style*="transparent"]) {
+.nina-strikethrough[style*="background-color"]:not([style*="transparent"]) {
 	text-decoration: line-through;
 }
 

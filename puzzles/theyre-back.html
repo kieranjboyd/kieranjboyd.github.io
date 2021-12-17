@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - They're Back</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+		<style type="text/css">
+			.graffiti {
+				font-family: 'Permanent Marker' !important;
+				font-size: 24px;
+				letter-spacing: 3px;
+				text-align: center;
+			}
+			.graffiti[style*="background-color"]:not([style*="transparent"]) {
+				display: block;
+				background-color: unset !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-theyre-back
+							exolve-title: They're Back!
+							exolve-setter: Binder
+							exolve-width: 6
+							exolve-height: 6
+							exolve-grid:
+								B E N_I G N_
+								R|T|P_O R K 
+								I|H O W I E 
+								A N N A_L|V 
+								N_I C K+L|I 
+								I C E M E N 
+							exolve-across
+								1 <span class="nina-strikethrough">Twits</span><span class="nina-hidden">Twist</span> drink in Sir Kingsley's ~{cordial}~ (6)<br>BE(GIN<)N
+								5 ~{<span class="nina-strikethrough">Patsy</span><span class="nina-hidden">Pasty</span> filling}~, perhaps, the end of potluck? (4)<br>P or K [ie: either of of PotlucK]
+								7 How we announced ~{a host from America's Got Talent}~ (5)<br>"how we"
+								9 ~{Record}~, every year, when the university's <span class="nina-strikethrough">lots</span><span class="nina-hidden">lost</span> … (5)<br>ANN(-u)AL
+								10 … ~{cut}~ ~{the seasonal delivery guy}~? (4)<br>ddef. ["delivery guy" as in St Nick]
+								11 ~{Seasonal delivery guys who have to work <span class="nina-strikethrough">fats</span><span class="nina-hidden">fast</span>}~ with one glue mostly (6)<br>I + CEMEN(-t)
+							exolve-down
+								1 ~{A very naughty boy}~'s brainstorm? (5)<br>BRAIN*
+								2 "Using the <span class="nina-strikethrough">boots</span><span class="nina-hidden">boost</span>, establish an alibi, Sonic!" - Tails, ~{race-focused}~ (6)<br>_e _t _h _n _i _c
+								3 Mario was content ~{moving water <span class="nina-strikethrough">closets</span><span class="nina-hidden">closest</span> to Eldora}~ (4)<br>_IO WA_
+								4 Girl's confused by the French ~{barrier that keeps things <span class="nina-strikethrough">gutsy</span><span class="nina-hidden">gusty</span>}~ (6)<br>GIRL* + LE
+								6 ~{Memorable Catherine O'Hara line}~ from Knives Out - pointless (5)<br>(KNIVE(-s))* [S as in a compass point]
+								8 <span class="nina-strikethrough">Nets</span><span class="nina-hidden">Nest</span> could start in one ~{Spanish football team, perhaps}~ (4)<br>ON(C_)E ["once" in Spanish means "eleven"]
+							exolve-preamble:
+								<p>A band of miscreants have returned to wreck havoc on this crossword. <span class="nina-1">All but one of them appear in the final grid</span> - their clues function normally. In each of the other clues, however, <span class="nina-2">one word has been tainted in a way indicated by the group's name</span>.</p>
+								<p>The gang's leader has left a cryptic message below. Convert the letters of the leader's name to numbers, and shift each letter of the message forward through the alphabet according to those numbers (looping around when you reach the end of the name, or when you reach the end of the alphabet). This will reveal an excuse for why the gang's gone down this dangerous path.</p>
+								<p class="graffiti nina-strikethrough"><b>HMZDSYSJGQSMZO</b></p>
+								<p class="graffiti nina-hidden"><b>I WANT IT THAT WAY</b></p>
+							exolve-question: What's the excuse? (20)* I WANT IT THAT WAY
+							exolve-nina: lightblue nina-strikethrough nina-hidden nina-2
+							exolve-nina: goldenrod a2 a3 a4 a5 a6 b2 b4 c2 c4 d2 d4 e4 f1 f2 f3 f4 f5
+							exolve-nina: palegoldenrod nina-1
+							exolve-explanations:
+								<p>The Backstreet Boys have flipped eight streets (ie: <span class="nina-2">st</span>'s) back in the clues. Why? As AJ (the missing member) explains (in song): <a href="https://www.youtube.com/watch?v=4fndeDfaWCg" rel="noopener noreferrer" target="_blank">"I want it that way."</a></p>
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=51);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2021-10-08</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
