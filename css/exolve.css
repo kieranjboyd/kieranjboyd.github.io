@@ -62,6 +62,6 @@
 	text-decoration: line-through;
 }
 
-span.nina-strikethrough + span.nina-hidden, span.nina-hidden + span.nina-strikethrough {
+span.nina-strikethrough + span.nina-hidden:not(.nina-nospace), span.nina-hidden:not(.nina-nospace) + span.nina-strikethrough {
 	margin-left: 4px;
 }
