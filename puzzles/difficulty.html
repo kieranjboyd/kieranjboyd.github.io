@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Difficulty</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-difficulty
+							exolve-title: Difficulty
+							exolve-setter: Binder
+							exolve-width: 6
+							exolve-height: 6
+							exolve-grid:
+								H A S B R_O 
+								A|C L U E_D 
+								S|L|E Z R A 
+								S U_E Z|A|M 
+								L O_P E Z|A 
+								E L Y S E E 
+							exolve-across:
+								1 ~{Risk manager}~ owns frat guy (6)* HAS + BRO
+								6 ~{Basically all language-y, puzzlehunt-y ingredients, essentially}~! (5)* <span>_C_ _L_ _U_ _E_ _D_ (&lit)</span>
+								7 The Reverend's address starts with ~{a syllable at the beginning of a hymn <span class="nina-2">book</span>}~ (4)* [<span class="nina-1">T</span>RA] T_ R_ A_
+								9  Ballistic missile bypassing <span class="nina-2">canal</span> opening in ~{south of France}~ (4)* [<span class="nina-1">S</span>UD] SCUD - C_
+								10 ~{Cuts}~ edges with <span class="nina-2">George</span> the Third, for one (5)* [LOP<span class="nina-1">S</span>] LIPS with I->(-ge)O(-rge)
+								11 Rarely-seen interior in ~{Parisian palace}~ (6)* <span>_ELY SEE_</span>
+							exolve-down:
+								1 ~{Badger}~ lashes out (6)* LASHES*
+								2 Prime pieces of ducal land ~{where Jackie Robinson played four sports}~ (abbr.) (4)* dUCaL lAnd [letters in prime number positions]
+								3 ~{Doc's peer}~-reviewed variable skin treatments (6)* (Y + PEELS)<
+								4 ~{Rumours}~ of ~{drones}~ (6)* double definition
+								5 ~{Ghost character}~ held back by beam adoption (2 wds) (6)* (_EAM ADO_)<
+								8 ~{Bring down}~? Just the opposite, we hear (4)* "raise"
+							exolve-preamble:
+								<p><a href="difficulty.pdf">Link to PDF version</a></p>
+								<p>In <span class="nina-1">three parts</span> of this puzzle I've applied some advice given in response to my previous contribution to Hayley's streams: make it easy (at least for Americans). Together these parts, in a reciprocal manner, reveal a potential description for my previous stream puzzle (but hopefully not this one). Enumerations are withheld, and <span class="nina-2">one-word definitions</span> for modified entries can be found in the corresponding clues.</p>
+							exolve-question: What's the potential description? (20)* TEDIOUS
+							exolve-nina: goldenrod nina-1
+							exolve-nina: lightpink nina-2
+							exolve-nina: goldenrod c4 d4 c3 d3 d2 e2
+							exolve-explanations:
+								<p>I've made each of the letters T, D, and S "easy" (EZ, using American pronunication) - hopefully that wasn't too <span class="nina-1">TEDIOUS</span>.</p>
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=0);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2024-02-17</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
