@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Check This Out!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-check-this-out
+							exolve-title: Check This Out!
+							exolve-setter: Binder
+							exolve-width: 6
+							exolve-height: 6
+							exolve-option: rebus-cells
+							exolve-grid:
+								F L I N T S 
+								R A N O U T 
+								I P SUM + POINT _ T O 
+								A T THAT | ON T O 
+								R O S E U P 
+								S P O R T S
+							exolve-across:
+								1 ~{Lighter parts}~ of loud fluff pieces (6)* F + LINTS
+								7 Lic<span class="nina-2">k</span>ing, in slang, "<span class="nina-hidden nina-nospace">check</span>s" "an" and "~{gone}~" (6)* [RAN OUT] R(AN)OUT
+								8 Drunk m<span class="nina-2">i</span>x-ups, missing letter in a <span class="nina-hidden nina-nospace">check</span>box and ~{second word in a text box}~ (2 wds.) (3)* MIXUPS* - X
+								9 ~{Mean}~ = .2 [excluding width] (2 wds.) (3)* [POINT TO] POINT TWO - W
+								10 Reapplying pieces from hat ~{to boot}~ (2 wds.) (3)* [AT THAT] HAT letter bank
+								12 ~{Suspicious of}~ contorted guts (3)* _ONTO_
+								13 Horrible poseur ~{was revolting}~ (2 wds.) (6)* [ROSE UP] POSEUR*
+								14 ~{Wears}~ strips of soft material for sharpening the wrong way (6)* <STROPS
+							exolve-down:
+								1 ~{Brothers}~ in arms missing mass after Friday (6)* FRI + AR(-m)S
+								2 ~{Applia<span class="nina-2">n</span>ce that might get a tech <span class="nina-hidden nina-nospace">check</span>up}~ in front of amusement park, within ground plot (6)* A_ + P in PLOT*
+								3 ~{To put it briefly}~, hotel's, uh, reported (2 wds.) (3)* [IN SUM] "inn's um"
+								4 ~{Kind of blunt assessment}~?! (2 wds.) (3)* [NO POINT] ddef
+								5 Justin Timberlake's initially seen in a mirror twice - ~{that's a shame}~ (hyph.) (6)* [TUT-TUT] J_ T_ reflected twice
+								6 ~{Bends over}~ and essentially stops … stops … stops (6)* STO((-st)O(-ps))PS
+								11 Body ima<span class="nina-2">g</span>es with an empty circle covering <span class="nina-hidden nina-nospace">check</span>mark in the second position? ~{Really?}~ (2 wds.) (3)* [THAT SO] T((-c)H(-echmark))ATS + O
+								12 ~{Feature of 'Rope,' 'Birdman,' or 'Victoria'}~?! (3)* ddef (ONE R)
+							exolve-preamble:
+								<p><a href="difficulty.pdf">TO DO</a></p>
+								<p>Every cell in this grid is checked … but to make up for it, in some clues one word is <span class="nina-3">unchecked</span>, which you need to fix before solving. If the <i>nth</i> word needs correction, take the <i>nth</i> letter of the clue - together they reveal <span class="nina-2">who's worried about all the checking</span>.</p>
+								<p>You can still pre-check <span class="nina-1">some grid cell contents</span> - check their openings from the top-left: clockwise they form a description of their location (and another type of check you could do there); anti-clockwise they reveal a final "check" word, which is what both you and I should do now, before you truly check out!</p>
+								<p><i>Enumerations and word counts have been withheld.</i></p>
+							exolve-question: What's the location description/action? (20)* SPOT(CHECK)
+							exolve-question: Who's worried? (20)* KING
+							exolve-question: What "check" should we do? (20)* STOP
+							exolve-nina: lightblue nina-strikethrough nina-hidden nina-3
+							exolve-nina: lightpink nina-2
+							exolve-nina: goldenrod c3 d3 c4 d4
+							exolve-nina: goldenrod nina-1
+								exolve-explanations:
+								<p>Certainly, a chess <span class="nina-2">KING</span> would be concerned about being checked (out), so maybe once you've done your <span class="nina-1">SPOT</span>-check, it's time to <span class="nina-1">STOP</span> this madness!</p>
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=0);
+				</script>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2024-02-17</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
