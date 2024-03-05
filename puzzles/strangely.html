@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>KJB - Puzzles - Difficulty</title>
+		<title>KJB - Puzzles - Strangely</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script>
-		window.onload = function() {
-		  document.getElementById('xlv1-grid-and-clues').className = 'hidden';
-		};
-		function toggle() {
-		   var element = document.getElementById("xlv1-grid-and-clues");
-		   element.classList.toggle("hidden");
-		   var element = document.getElementById("reveal-puzzle");
-		   element.classList.toggle("hidden");
-		}
+			function show_puzzle() {
+				puzzleText = `
+					exolve-begin
+						exolve-id: binder-difficulty
+						exolve-width: 6
+						exolve-height: 6
+						exolve-grid:
+							S! P! I! E! T! H! 
+							H! U! M! V! E! E! 
+							A! B! B! E! S! S! 
+							F! L! I! N! T! S! 
+							T! I! B! I! A! E! 
+							S! C! E! N! E! S! 
+						exolve-across:
+							1 Strangely, this puzzle (on the surface) gives ~{old-timey notes}~ (6) (THIS + P(-uzzl)E)*
+							7 ~{It's a vehicle for conflict}~, combining a sign of activity with the sign of peace (6) HUM + VEE
+							8 ~{A master in the habit}~ of book-keeping may at heart be speechless, gutted (6) B [book] in (-m)A(-y) + BE + S_S
+							9 In this case, after fluid, ~{lighter parts}~ (6) FL + IN + T(-hi)S
+							10 this "brigade" is missing even parts for ~{bones}~ (6) T_I_ B_I_A_E
+							11 At first, standard crossword elements need elucidating, such as ~{2D displays}~ (6) S_ C_ E_ N_ E_ S_
+						exolve-down:
+							1 But you see, such a fine trellis with no middle ~{bars}~ (6) S(-uc)H ["you see"] + A + F + T_S
+							2 it's ~{open}~, constant, and club shaped (6) (PI + CLUB)*
+							3 ~{Take in}~ the cores of multimedia, mobile labels (6) <span>_IM_ _BI_ _BE_</span>
+							4 ~{they contain seeds}~ of change in estate (6) ESTATE*
+							5 Well, I need head to make ~{good night briefly}~ (6) [EVENIN'] EVEN + I + N(-eed)
+							6 In the end, although the format's ambiguous, hope this ~{works, from one crossword-y author}~. (6) <span>_H _E _S _S _E _S</span>
+						exolve-preamble:
+							<p>Hopefully you've figured it out, but the above two paragraphs are in fact sets of Across and Down cryptic clues combined together. The required grid is 6×6 (of course), and has "no middle bars".</p>
+							<p>This was a fun one to make. SPIETH and SHAFTS were my seeds (to make the first sentence work, and reference "bars" in the second paragraph), and the fill was pretty constrained from there. Thanks to <a href="http://pixpuzzles.blogspot.com/">Pixlate</a> for test-solving!</p>
+					exolve-end
+				`;
+				createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=0);
+				var element = document.getElementById("reveal-puzzle");
+				element.style.display = "none";
+			}
 		</script>
 		<style>
-		.hidden {
-		  display: none;
+		#xlv1-button-row-1, #xlv1-button-row-2 {
+			display: none;
 		}
 		</style>
 		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
@@ -40,50 +67,18 @@
 		<div class="main">
 			<a name="top"></a>
 			<div class="content">
-				<div id="exolve"></div>
-				<script>
-					puzzleText = `
-						exolve-begin
-							exolve-id: binder-difficulty
-							exolve-title: Strangely
-							exolve-setter: Binder
-							exolve-width: 6
-							exolve-height: 6
-							exolve-grid:
-								S! H! A! F! T! S! 
-								P! U! B! L! I! C! 
-								I! M! B! I! B! E! 
-								E! V! E! N! I! N! 
-								T! E! S! T! A! E! 
-								H! E! S! S! E! S! 
-							exolve-across:
-								1 Strangely, this puzzle (on the surface) gives ~{old-timey notes}~ (6) (THIS + P(-uzzl)E)*
-								7 ~{It's a vehicle for conflict}~, combining a sign of activity with the sign of peace (6) HUM + VEE
-								8 ~{A master in the habit}~ of book-keeping may at heart be speechless, gutted (6) B [book] in (-m)A(-y) + BE + S_S
-								9 In this case, after fluid, ~{lighter parts}~ (6) FL + IN + T(-hi)S
-								10 this "brigade" is missing even parts for ~{bones}~ (6) T_I_ B_I_A_E
-								11 At first, standard crossword elements need elucidating, such as ~{2D displays}~ (6) S_ C_ E_ N_ E_ S_
-							exolve-down:
-								1 But you see, such a fine trellis with no middle ~{bars}~ (6) S(-uc)H ["you see"] + A + F + T_S
-								2 it's ~{open}~, constant, and club shaped (6) (PI + CLUB)*
-								3 ~{Take in}~ the cores of multimedia, mobile labels (6) _IM_ _BI_ _BE_
-								4 ~{they contain seeds}~ of change in estate (6) ESTATE*
-								5 Well, I need head to make ~{good night briefly}~ (6) EVEN + I + N(-eed)
-								6 In the end, although the format's ambiguous, hope this ~{works, from one crossword-y author}~. (6) _H _E _S _S _E _S
-							exolve-preamble:
-								<p><a href="difficulty.pdf">Link to PDF version</a></p>
-								<p>Strangely, this puzzle (on the surface) gives old-timey notes. It's a vehicle for conflict, combining a sign of activity with the sign of peace. A master in the habit of book-keeping may at heart be speechless, gutted. In this case, after fluid, lighter parts … this "brigade" is missing even parts for bones. At first, standard crossword elements need elucidating, such as 2D displays.</p>
-								<p>But you see, such a fine trellis with no middle bars - it's open, constant, and club shaped. Take in the cores of multimedia, mobile labels - they contain seeds of change in estate. Well, I need head to make good night briefly. In the end, although the format's ambiguous, hope this works, from one crossword-y author.</p>
-								<p><i>Answers include one archaic word, one colloquialism, and one proper noun</i></p>
-							exolve-explanations:
-								<p>I've made each of the letters T, D, and S "easy" (EZ, using American pronunication) - hopefully that wasn't too <span class="nina-1">TEDIOUS</span> (using an Australian pronunciation).</p>
-						exolve-end		
-					`;
-					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=0);
-				</script>
-				<div class="xlv-controls-row">
-					<button class="xlv-button" title="Reveal solution" id="reveal-puzzle" onclick="toggle()">Reveal answer</button>
+				<h2 class="xlv-title">Strangely</h2>
+				<div class="xlv-setter" style="color: darkgreen;">
+					<span id="xlv1-setter-by">By</span>
+					Binder
 				</div>
+				<p>Strangely, this puzzle (on the surface) gives old-timey notes. It's a vehicle for conflict, combining a sign of activity with the sign of peace. A master in the habit of book-keeping may at heart be speechless, gutted. In this case, after fluid, lighter parts … this "brigade" is missing even parts for bones. At first, standard crossword elements need elucidating, such as 2D displays.</p>
+				<p>But you see, such a fine trellis with no middle bars - it's open, constant, and club shaped. Take in the cores of multimedia, mobile labels - they contain seeds of change in estate. Well, I need head to make good night briefly. In the end, although the format's ambiguous, hope this works, from one crossword-y author.</p>
+				<p><i>Answers include one archaic word, one colloquialism, and one proper noun.</i></p>
+				<div class="xlv-controls-row">
+					<button class="xlv-button" title="Reveal solution" id="reveal-puzzle" onclick="show_puzzle()">Reveal answer</button>
+				</div>
+				<div id="exolve"></div>
 				<div class="footer">
 					<p><a href="#top">Back to top</a> | KJB, 2024-03-05</p>
 				</div>
