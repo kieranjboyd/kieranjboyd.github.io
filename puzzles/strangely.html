@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>KJB - Puzzles - Difficulty</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="../css/kjb.css">
+		<link rel="stylesheet" type="text/css" href="https://viresh-ratnakar.github.io/exolve-m.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/exolve.css">
+		<script type="text/javascript" src="../js/navbar.js"></script>
+		<script type="text/javascript" src="https://viresh-ratnakar.github.io/exolve-m.js"></script>
+		<script>
+		window.onload = function() {
+		  document.getElementById('xlv1-grid-and-clues').className = 'hidden';
+		};
+		function toggle() {
+		   var element = document.getElementById("xlv1-grid-and-clues");
+		   element.classList.toggle("hidden");
+		   var element = document.getElementById("reveal-puzzle");
+		   element.classList.toggle("hidden");
+		}
+		</script>
+		<style>
+		.hidden {
+		  display: none;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="navbar" id="navbar">
+			<a href="../index.html" class="active wide-text">KJB</a>
+			<div class="navbar-links">			
+				<a href="../puzzles.html">Puzzles</a>
+				<a href="../comedy.html">Comedy</a>
+				<a href="../writing.html">Writing</a>
+			</div>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<span class="material-icons">menu</span>
+			</a>
+		</div>
+		<div class="main">
+			<a name="top"></a>
+			<div class="content">
+				<div id="exolve"></div>
+				<script>
+					puzzleText = `
+						exolve-begin
+							exolve-id: binder-difficulty
+							exolve-title: Strangely
+							exolve-setter: Binder
+							exolve-width: 6
+							exolve-height: 6
+							exolve-grid:
+								S! H! A! F! T! S! 
+								P! U! B! L! I! C! 
+								I! M! B! I! B! E! 
+								E! V! E! N! I! N! 
+								T! E! S! T! A! E! 
+								H! E! S! S! E! S! 
+							exolve-across:
+								1 Strangely, this puzzle (on the surface) gives ~{old-timey notes}~ (6) (THIS + P(-uzzl)E)*
+								7 ~{It's a vehicle for conflict}~, combining a sign of activity with the sign of peace (6) HUM + VEE
+								8 ~{A master in the habit}~ of book-keeping may at heart be speechless, gutted (6) B [book] in (-m)A(-y) + BE + S_S
+								9 In this case, after fluid, ~{lighter parts}~ (6) FL + IN + T(-hi)S
+								10 this "brigade" is missing even parts for ~{bones}~ (6) T_I_ B_I_A_E
+								11 At first, standard crossword elements need elucidating, such as ~{2D displays}~ (6) S_ C_ E_ N_ E_ S_
+							exolve-down:
+								1 But you see, such a fine trellis with no middle ~{bars}~ (6) S(-uc)H ["you see"] + A + F + T_S
+								2 it's ~{open}~, constant, and club shaped (6) (PI + CLUB)*
+								3 ~{Take in}~ the cores of multimedia, mobile labels (6) _IM_ _BI_ _BE_
+								4 ~{they contain seeds}~ of change in estate (6) ESTATE*
+								5 Well, I need head to make ~{good night briefly}~ (6) EVEN + I + N(-eed)
+								6 In the end, although the format's ambiguous, hope this ~{works, from one crossword-y author}~. (6) _H _E _S _S _E _S
+							exolve-preamble:
+								<p><a href="difficulty.pdf">Link to PDF version</a></p>
+								<p>Strangely, this puzzle (on the surface) gives old-timey notes. It's a vehicle for conflict, combining a sign of activity with the sign of peace. A master in the habit of book-keeping may at heart be speechless, gutted. In this case, after fluid, lighter parts … this "brigade" is missing even parts for bones. At first, standard crossword elements need elucidating, such as 2D displays.</p>
+								<p>But you see, such a fine trellis with no middle bars - it's open, constant, and club shaped. Take in the cores of multimedia, mobile labels - they contain seeds of change in estate. Well, I need head to make good night briefly. In the end, although the format's ambiguous, hope this works, from one crossword-y author.</p>
+								<p><i>Answers include one archaic word, one colloquialism, and one proper noun</i></p>
+							exolve-explanations:
+								<p>I've made each of the letters T, D, and S "easy" (EZ, using American pronunication) - hopefully that wasn't too <span class="nina-1">TEDIOUS</span> (using an Australian pronunciation).</p>
+						exolve-end		
+					`;
+					createExolve(puzzleText, containerId="", provideStateUrl=true, visTop=0);
+				</script>
+				<div class="xlv-controls-row">
+					<button class="xlv-button" title="Reveal solution" id="reveal-puzzle" onclick="toggle()">Reveal answer</button>
+				</div>
+				<div class="footer">
+					<p><a href="#top">Back to top</a> | KJB, 2024-03-05</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
